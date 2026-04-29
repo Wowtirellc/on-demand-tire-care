@@ -9,7 +9,7 @@ const Navbar = () => {
       <div className="container flex h-32 items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
           <img
-            src="/logo.svg"
+            src="/logo.png"
             alt="Wheels on Wheels logo"
             className="h-[7.5rem] w-[7.5rem] object-contain"
           />
