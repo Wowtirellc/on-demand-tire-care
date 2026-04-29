@@ -11,7 +11,7 @@ const faqs = [
   },
   {
     q: "Do I need to supply tires?",
-    a: "Either works. You can supply your own tires, or we can source them for you. Tell us what you'd like in your quote request.",
+    a: "We sell tires from most major and minor brands, but if your heart is set on a exotic, rare, or discontinued new tires that we can not source we will gladly install them for you!",
   },
   {
     q: "How long does service take?",
