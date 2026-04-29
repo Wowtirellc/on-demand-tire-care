@@ -14,7 +14,7 @@ const steps = [
   {
     icon: Wrench,
     title: "We come to you",
-    desc: "Our trailer arrives on schedule. We mount, balance, program, and you're rolling.",
+    desc: "Our mobile tire shop comes to you at the scheduled time and we take care of all scheduled tire needs.",
   },
 ];
 
@@ -42,7 +42,7 @@ const HowItWorks = () => {
                 <span className="font-display text-5xl text-secondary/30">0{i + 1}</span>
               </div>
               <h3 className="mt-6 text-xl font-semibold">{step.title}</h3>
-              <p className="mt-2 text-muted-foreground leading-relaxed">{step.desc}</p>
+              <p className="mt-2 text-muted-foreground leading-relaxed text-sm">{step.desc}</p>
             </li>
           ))}
         </ol>

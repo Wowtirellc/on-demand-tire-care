@@ -13,8 +13,7 @@ const Hero = () => {
               Bringing Tire Service <span className="text-primary">to You.</span>
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed">
-              Professional tire replacement and TPMS sensor service at your home or workplace.
-              Skip the tire shop we bring the trailer to your driveway.
+              Professional tire replacement and TPMS sensor service at your home or workplace. Skip the tire shop we bring the tire service to you!
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
