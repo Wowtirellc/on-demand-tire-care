@@ -33,7 +33,7 @@ const WhyChooseUs = () => {
             <li key={r.title} className="flex gap-4">
               <div className="shrink-0 h-11 w-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
                 {r.image ? (
-                  <img src={r.image} alt="" className="h-6 w-6 object-contain" />
+                  <img src={r.image} alt="" className="h-[1.8rem] w-[1.8rem] object-contain" />
                 ) : r.icon ? (
                   <r.icon className="h-5 w-5" />
                 ) : null}
