@@ -1,0 +1,41 @@
+import { Home, Clock, CalendarRange, Gauge, ReceiptText, ShieldCheck } from "lucide-react";
+
+const reasons = [
+  { icon: Home, title: "We come to you", desc: "Home, office, or jobsite — your driveway becomes the shop." },
+  { icon: Clock, title: "No waiting rooms", desc: "Skip the lobby. Keep working, parenting, or relaxing." },
+  { icon: CalendarRange, title: "Flexible scheduling", desc: "Book a window that actually works with your day." },
+  { icon: Gauge, title: "TPMS expertise", desc: "Sensors replaced and programmed — no leftover warning lights." },
+  { icon: ReceiptText, title: "Transparent quotes", desc: "Clear pricing up front. No surprise add-ons at pickup." },
+  { icon: ShieldCheck, title: "Professional setup", desc: "Shop-grade trailer, tools, and torque specs at your address." },
+];
+
+const WhyChooseUs = () => {
+  return (
+    <section id="why" className="py-20 md:py-28 bg-background">
+      <div className="container">
+        <div className="max-w-2xl">
+          <p className="text-sm font-medium text-primary uppercase tracking-wider">Why choose us</p>
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
+            The convenience of mobile, the precision of a shop.
+          </h2>
+        </div>
+
+        <ul className="mt-14 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+          {reasons.map((r) => (
+            <li key={r.title} className="flex gap-4">
+              <div className="shrink-0 h-11 w-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                <r.icon className="h-5 w-5" />
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold">{r.title}</h3>
+                <p className="mt-1 text-muted-foreground leading-relaxed">{r.desc}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+};
+
+export default WhyChooseUs;

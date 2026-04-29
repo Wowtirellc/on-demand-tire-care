@@ -1,0 +1,57 @@
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+const faqs = [
+  {
+    q: "Is this roadside assistance?",
+    a: "No. We're a scheduled mobile tire service. We come to your home or workplace at a time you choose — we don't operate as a roadside emergency service.",
+  },
+  {
+    q: "Do you handle TPMS warning lights?",
+    a: "Yes. We replace failed TPMS sensors and program them to your vehicle, including the relearn procedure, so you drive away with no warning lights.",
+  },
+  {
+    q: "Do I need to supply tires?",
+    a: "Either works. You can supply your own tires, or we can source them for you. Tell us what you'd like in your quote request.",
+  },
+  {
+    q: "How long does service take?",
+    a: "Most jobs take less than 2 hours from arrival to wrap-up. We'll give you a clear time estimate when we confirm your appointment.",
+  },
+  {
+    q: "What areas do you cover?",
+    a: "Augusta and Rockingham County, Virginia. If you're nearby, ask — we'll let you know.",
+  },
+  {
+    q: "What payment methods do you accept?",
+    a: "We accept major cards and common digital payments. Details are confirmed when we schedule your appointment.",
+  },
+];
+
+const FAQ = () => {
+  return (
+    <section id="faq" className="py-20 md:py-28 bg-muted/30 border-y border-border">
+      <div className="container max-w-4xl">
+        <div className="text-center">
+          <p className="text-sm font-medium text-primary uppercase tracking-wider">FAQ</p>
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
+            Common questions, answered.
+          </h2>
+        </div>
+        <Accordion type="single" collapsible className="mt-12">
+          {faqs.map((f, i) => (
+            <AccordionItem key={i} value={`item-${i}`} className="border-border">
+              <AccordionTrigger className="text-left text-base sm:text-lg font-semibold hover:no-underline hover:text-primary">
+                {f.q}
+              </AccordionTrigger>
+              <AccordionContent className="text-muted-foreground leading-relaxed text-base">
+                {f.a}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </div>
+    </section>
+  );
+};
+
+export default FAQ;
