@@ -3,13 +3,13 @@ import { ClipboardList, CalendarCheck, Wrench } from "lucide-react";
 const steps = [
   {
     icon: ClipboardList,
-    title: "Share your details",
+    title: "Share vehicle details",
     desc: "Tell us about your vehicle, tire size, and any TPMS needs through our quote form.",
   },
   {
     icon: CalendarCheck,
-    title: "Get a quote & schedule",
-    desc: "We confirm pricing and pick a time that fits your day — at home or work.",
+    title: "Schedule",
+    desc: "We confirm pricing and pick a time that fits your day - at home or work.",
   },
   {
     icon: Wrench,

@@ -3,7 +3,7 @@ import tpmsImage from "@/assets/tpms-detail.jpg";
 
 const services = [
   { icon: Truck, title: "Mobile tire replacement", desc: "Full tire swap-outs at your driveway, parking lot, or jobsite." },
-  { icon: Scale, title: "Mounting & balancing", desc: "Precision balancing on professional shop-grade equipment." },
+  { icon: Scale, title: "Mounting & balancing", desc: "Computer balancing on professional shop-grade equipment." },
   { icon: Gauge, title: "TPMS sensor replacement", desc: "Replace failed or aging tire pressure sensors with quality OE-grade parts." },
   { icon: Settings2, title: "TPMS programming & relearn", desc: "Sensor programming and vehicle relearn so warning lights stay off." },
   { icon: PackageCheck, title: "Customer-supplied tires", desc: "Have tires already? We'll install them. Or we can source them for you." },
@@ -63,8 +63,8 @@ const Services = () => {
             </h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               TPMS sensors fail every 5–10 years and require programming and a vehicle relearn after
-              replacement. We carry the gear and the know-how to do it right the first time, so you
-              drive away without warning lights or guesswork.
+              replacement. We have the specialized tools and the know-how to do it right the first
+              time, so you drive away without warning lights or guesswork.
             </p>
           </div>
         </div>
