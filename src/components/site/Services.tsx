@@ -1,13 +1,23 @@
-import { Disc3, Gauge, Settings2, PackageCheck, Scale, Truck } from "lucide-react";
+import { Gauge, Settings2, PackageCheck, Scale, Truck } from "lucide-react";
 import tpmsImage from "@/assets/tpms-detail.jpg";
+import tireIcon from "@/assets/icon-tire.png";
+import tpmsIcon from "@/assets/icon-tpms.png";
+import tpmsIconRed from "@/assets/icon-tpms-red.png";
 
-const services = [
+type Service = {
+  icon?: React.ComponentType<{ className?: string }>;
+  image?: string;
+  title: string;
+  desc: string;
+};
+
+const services: Service[] = [
   { icon: Truck, title: "Mobile tire replacement", desc: "Full tire swap-outs at your driveway, parking lot, or jobsite." },
   { icon: Scale, title: "Mounting & balancing", desc: "Computer balancing on professional shop-grade equipment." },
-  { icon: Gauge, title: "TPMS sensor replacement", desc: "Replace failed or aging tire pressure sensors with quality OE-grade parts." },
+  { image: tpmsIcon, title: "TPMS sensor replacement", desc: "Replace failed or aging tire pressure sensors with quality OE-grade parts." },
   { icon: Settings2, title: "TPMS programming & relearn", desc: "Sensor programming and vehicle relearn so warning lights stay off." },
   { icon: PackageCheck, title: "Customer-supplied tires", desc: "Have tires already? We'll install them. Or we can source them for you." },
-  { icon: Disc3, title: "Tire rotation & inspection", desc: "Quick rotations and visual inspections while we're on site." },
+  { image: tireIcon, title: "Tire rotation & inspection", desc: "Quick rotations and visual inspections while we're on site." },
 ];
 
 const Services = () => {
@@ -34,7 +44,11 @@ const Services = () => {
               className="group rounded-2xl border border-border bg-card p-6 hover:border-secondary/40 hover:-translate-y-0.5 transition-all"
             >
               <div className="h-11 w-11 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors">
-                <s.icon className="h-5 w-5" />
+                {s.image ? (
+                  <img src={s.image} alt="" className="h-6 w-6 object-contain" />
+                ) : s.icon ? (
+                  <s.icon className="h-5 w-5" />
+                ) : null}
               </div>
               <h3 className="mt-5 text-lg font-semibold">{s.title}</h3>
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
@@ -56,6 +70,7 @@ const Services = () => {
           </div>
           <div className="p-8 lg:p-12">
             <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-medium uppercase tracking-wider">
+              <img src={tpmsIconRed} alt="" className="h-4 w-4 object-contain" />
               TPMS expertise
             </span>
             <h3 className="mt-4 text-2xl sm:text-3xl font-semibold">
