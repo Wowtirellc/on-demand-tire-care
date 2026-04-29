@@ -1,10 +1,18 @@
-import { Home, Clock, CalendarRange, Gauge, ReceiptText, ShieldCheck } from "lucide-react";
+import { Home, Clock, CalendarRange, ReceiptText, ShieldCheck } from "lucide-react";
+import tpmsIconRed from "@/assets/icon-tpms-red.png";
 
-const reasons = [
+type Reason = {
+  icon?: React.ComponentType<{ className?: string }>;
+  image?: string;
+  title: string;
+  desc: string;
+};
+
+const reasons: Reason[] = [
   { icon: Home, title: "We come to you", desc: "Home, office, or jobsite — your driveway becomes the shop." },
   { icon: Clock, title: "No waiting rooms", desc: "Skip the lobby. Keep working, parenting, or relaxing." },
   { icon: CalendarRange, title: "Flexible scheduling", desc: "Book a window that actually works with your day." },
-  { icon: Gauge, title: "TPMS expertise", desc: "Sensors replaced and programmed — no leftover warning lights." },
+  { image: tpmsIconRed, title: "TPMS expertise", desc: "Sensors replaced and programmed — no leftover warning lights." },
   { icon: ReceiptText, title: "Transparent quotes", desc: "Clear pricing up front. No surprise add-ons at pickup." },
   { icon: ShieldCheck, title: "Professional setup", desc: "Shop-grade trailer, tools, and torque specs at your address." },
 ];
@@ -24,7 +32,11 @@ const WhyChooseUs = () => {
           {reasons.map((r) => (
             <li key={r.title} className="flex gap-4">
               <div className="shrink-0 h-11 w-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
-                <r.icon className="h-5 w-5" />
+                {r.image ? (
+                  <img src={r.image} alt="" className="h-6 w-6 object-contain" />
+                ) : r.icon ? (
+                  <r.icon className="h-5 w-5" />
+                ) : null}
               </div>
               <div>
                 <h3 className="text-lg font-semibold">{r.title}</h3>
