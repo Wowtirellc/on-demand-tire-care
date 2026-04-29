@@ -23,7 +23,7 @@ const faqs = [
   },
   {
     q: "What payment methods do you accept?",
-    a: "We accept major cards and common digital payments. Details are confirmed when we schedule your appointment.",
+    a: "We prefer cash/check but also accept all major credit and debit cards. We can take payment in person with tap to pay cards, Apple Pay, or Google Wallet, or you can pay online for even more payment methods like Cashapp (2% processing fee for all non cash payment options)",
   },
 ];
 
