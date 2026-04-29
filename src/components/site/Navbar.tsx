@@ -16,7 +16,7 @@ const Navbar = () => {
           <img
             src="/wheels-on-wheels-text.png"
             alt="Wheels on Wheels - Mobile Tire Shop"
-            className="h-[7.5rem] w-[7.5rem] object-contain"
+            className="h-[8.625rem] w-[8.625rem] object-contain"
           />
         </a>
         <nav className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
