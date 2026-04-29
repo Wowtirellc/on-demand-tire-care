@@ -18,7 +18,7 @@ const Hero = () => {
             </h1>
             <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed">
               Professional tire replacement and TPMS sensor service at your home or workplace.
-              Skip the tire shop — we bring the trailer to your driveway.
+              Skip the tire shop we bring the trailer to your driveway.
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
