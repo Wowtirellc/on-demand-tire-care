@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock, Gauge } from "lucide-react";
 import heroImage from "@/assets/hero-trailer.jpg";
 import { PHONE_DISPLAY, PHONE_TEL } from "./Navbar";
 
@@ -64,8 +64,8 @@ const Hero = () => {
               </div>
               <div className="absolute -bottom-6 -left-4 sm:left-6 bg-card border border-border rounded-xl p-4 shadow-elegant max-w-[260px]">
                 <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-lg bg-gradient-yellow flex items-center justify-center text-secondary-foreground font-display text-lg">
-                    W
+                  <div className="h-10 w-10 rounded-lg bg-gradient-yellow flex items-center justify-center text-secondary-foreground">
+                    <Gauge className="h-6 w-6" aria-label="TPMS sensor" />
                   </div>
                   <div>
                     <p className="text-sm font-semibold leading-tight">TPMS specialists</p>
