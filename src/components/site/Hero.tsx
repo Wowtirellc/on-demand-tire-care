@@ -58,17 +58,6 @@ const Hero = () => {
                   className="h-full w-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-6 -left-4 sm:left-6 bg-card border border-border rounded-xl p-4 shadow-elegant max-w-[260px]">
-                <div className="flex items-center gap-3">
-                  <div className="h-10 w-10 rounded-lg bg-gradient-yellow flex items-center justify-center text-secondary-foreground">
-                    <Gauge className="h-6 w-6" aria-label="TPMS sensor" />
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold leading-tight">TPMS specialists</p>
-                    <p className="text-xs text-muted-foreground">No warning lights left behind</p>
-                  </div>
-                </div>
-              </div>
               <div className="pointer-events-none absolute -top-10 -right-10 h-40 w-40 rounded-full bg-primary/20 blur-3xl" />
             </div>
           </div>
