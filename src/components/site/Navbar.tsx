@@ -8,9 +8,11 @@ const Navbar = () => {
     <header className="fixed top-0 inset-x-0 z-40 bg-background/80 backdrop-blur-md border-b border-border/60">
       <div className="container flex h-16 items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
-          <span className="inline-flex h-9 w-9 items-center justify-center rounded-md bg-gradient-accent text-primary-foreground font-display text-lg shadow-red">
-            W
-          </span>
+          <img
+            src="/placeholder.svg"
+            alt="Wheels on Wheels logo"
+            className="h-12 w-12 rounded-md object-cover shadow-red"
+          />
           <span className="font-display text-lg sm:text-xl tracking-tight">
             Wheels <span className="text-secondary">on</span> Wheels
           </span>
