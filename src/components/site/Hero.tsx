@@ -9,10 +9,6 @@ const Hero = () => {
       <div className="container relative">
         <div className="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-6">
-            <span className="inline-flex items-center gap-2 rounded-full border border-secondary/40 bg-secondary/10 px-3 py-1 text-xs font-medium text-secondary">
-              <span className="h-1.5 w-1.5 rounded-full bg-secondary" />
-              Scheduled mobile tire service — not roadside
-            </span>
             <h1 className="mt-6 text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-semibold leading-[1.05] text-balance">
               Bringing Tire Service <span className="text-primary">to You.</span>
             </h1>
