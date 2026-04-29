@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin, Clock } from "lucide-react";
+import { Phone, MapPin, Clock, Gauge } from "lucide-react";
 import heroImage from "@/assets/hero-trailer.jpg";
 import { PHONE_DISPLAY, PHONE_TEL } from "./Navbar";
 
