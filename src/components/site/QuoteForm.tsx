@@ -7,6 +7,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "@/hooks/use-toast";
 import { Upload, X } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
 
 const quoteSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100),
@@ -72,18 +73,42 @@ const QuoteForm = () => {
     }
 
     setSubmitting(true);
-    // Front-end only for now — simulate submission
-    await new Promise((r) => setTimeout(r, 600));
-    setSubmitting(false);
+    try {
+      const { error: dbError } = await supabase.from("quote_requests").insert({
+        name: data.name,
+        phone: data.phone,
+        email: data.email,
+        vehicle: data.vehicle,
+        tire_size: data.tireSize || null,
+        tpms_needed: data.tpmsNeeded,
+        tpms_notes: data.tpmsNotes || null,
+        message: data.message || null,
+      });
+      if (dbError) throw dbError;
 
-    toast({
-      title: "Quote request received",
-      description: "We'll review your details and reach out shortly to confirm pricing and scheduling.",
-    });
+      const { error: fnError } = await supabase.functions.invoke("send-quote-email", {
+        body: data,
+      });
+      if (fnError) throw fnError;
 
-    (e.target as HTMLFormElement).reset();
-    setTpmsNeeded(false);
-    setFiles([]);
+      toast({
+        title: "Quote request received",
+        description: "We'll review your details and reach out shortly to confirm pricing and scheduling.",
+      });
+
+      (e.target as HTMLFormElement).reset();
+      setTpmsNeeded(false);
+      setFiles([]);
+    } catch (err) {
+      console.error("Quote submission error:", err);
+      toast({
+        title: "Couldn't send your request",
+        description: "Please try again, or call us directly.",
+        variant: "destructive",
+      });
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
