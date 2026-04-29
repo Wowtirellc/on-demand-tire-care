@@ -16,7 +16,7 @@ const services: Service[] = [
   { icon: Scale, title: "Mounting & balancing", desc: "Computer balancing on professional shop-grade equipment." },
   { image: tpmsIcon, title: "TPMS sensor replacement", desc: "Replace failed or aging tire pressure sensors with quality OE-grade parts." },
   { icon: Settings2, title: "TPMS programming & relearn", desc: "Sensor programming and vehicle relearn so warning lights stay off." },
-  { icon: PackageCheck, title: "Customer-supplied tires", desc: "Have tires already? We'll install them. Or we can source them for you." },
+  { icon: PackageCheck, title: "Customer-supplied tires", desc: "We sell most major and minor tires" },
   { image: tireIcon, title: "Tire rotation & inspection", desc: "Quick rotations and visual inspections while we're on site." },
 ];
 
@@ -28,7 +28,7 @@ const Services = () => {
           <div className="lg:col-span-7">
             <p className="text-sm font-medium text-primary uppercase tracking-wider">Services</p>
             <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
-              Everything a tire shop does — at your address.
+              Everything a tire shop does - at your address.
             </h2>
           </div>
           <p className="lg:col-span-5 text-muted-foreground leading-relaxed">
