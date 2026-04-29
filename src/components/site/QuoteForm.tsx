@@ -124,8 +124,8 @@ const QuoteForm = () => {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="vehicle">Vehicle year, make & model *</Label>
-              <Input id="vehicle" name="vehicle" required maxLength={150} placeholder="e.g. 2019 Honda CR-V" />
+              <Label htmlFor="vehicle">Vehicle year, make, model & trim *</Label>
+              <Input id="vehicle" name="vehicle" required maxLength={150} placeholder="e.g. 2019 Honda CR-V EX-L" />
             </div>
 
             <div className="space-y-2">
