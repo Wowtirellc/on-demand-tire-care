@@ -13,9 +13,11 @@ const Navbar = () => {
             alt="Wheels on Wheels logo"
             className="h-[7.5rem] w-[7.5rem] object-contain"
           />
-          <span className="font-display text-lg sm:text-xl tracking-tight">
-            Wheels <span className="text-secondary">on</span> Wheels
-          </span>
+          <img
+            src="/wheels-on-wheels-text.png"
+            alt="Wheels on Wheels - Mobile Tire Shop"
+            className="h-[7.5rem] w-[7.5rem] object-contain"
+          />
         </a>
         <nav className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
           <a href="#how" className="hover:text-foreground transition-colors">How it works</a>
