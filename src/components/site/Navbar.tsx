@@ -6,12 +6,12 @@ const PHONE_TEL = "5404584737"; // 540-458-4737
 const Navbar = () => {
   return (
     <header className="fixed top-0 inset-x-0 z-40 bg-background/80 backdrop-blur-md border-b border-border/60">
-      <div className="container flex h-16 items-center justify-between">
+      <div className="container flex h-20 items-center justify-between">
         <a href="#top" className="flex items-center gap-2">
           <img
             src="/logo.svg"
             alt="Wheels on Wheels logo"
-            className="h-12 w-12 rounded-md object-cover shadow-red text-xs"
+            className="h-16 w-16 rounded-md object-contain"
           />
           <span className="font-display text-lg sm:text-xl tracking-tight">
             Wheels <span className="text-secondary">on</span> Wheels
