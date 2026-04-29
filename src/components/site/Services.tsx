@@ -45,7 +45,7 @@ const Services = () => {
             >
               <div className="h-11 w-11 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors">
                 {s.image ? (
-                  <img src={s.image} alt="" className="h-6 w-6 object-contain" />
+                  <img src={s.image} alt="" className="h-7 w-7 object-contain" />
                 ) : s.icon ? (
                   <s.icon className="h-5 w-5" />
                 ) : null}
