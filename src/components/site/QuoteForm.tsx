@@ -121,7 +121,7 @@ const QuoteForm = () => {
               Tell us about your tires. We'll handle the rest.
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Share a few details and snap photos of your tires, vehicle info, or sidewall sizing.
+              Share a few details and snap photos of your current tires and vehicle tire info (inside driver side door jamb). 
               We'll review and contact you to confirm pricing and a time that works.
             </p>
             <ul className="mt-8 space-y-3 text-sm text-muted-foreground">
