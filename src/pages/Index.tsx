@@ -35,7 +35,7 @@ const Index = () => {
         <WhyChooseUs />
         <ServiceArea />
         <FAQ />
-        <Testimonials />
+        {/* <Testimonials /> Temporarily hidden until we have legitimate reviews. Re-enable to restore. */}
         <Contact />
       </main>
       <Footer />
