@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Wheels on Wheels</title>
+    <script>
+      // SPA fallback for GitHub Pages: redirect any unknown path to index.html
+      // while preserving the requested path so React Router can handle it.
+      (function () {
+        var path = window.location.pathname + window.location.search + window.location.hash;
+        sessionStorage.setItem("spa-redirect", path);
+        window.location.replace("/");
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
