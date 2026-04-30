@@ -64,7 +64,7 @@ const Contact = () => {
 const Footer = () => (
   <footer className="border-t border-border bg-background py-10">
       <div className="container flex items-center justify-center sm:justify-end gap-4 text-sm text-muted-foreground">
-        <p>© {new Date().getFullYear()} Wheels on Wheels. All rights reserved.</p>
+        <p>© {new Date().getFullYear()} Wheels on Wheels LLC. All rights reserved.</p>
       </div>
   </footer>
 );
