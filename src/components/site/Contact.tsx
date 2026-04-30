@@ -39,15 +39,15 @@ const Contact = () => {
             <li className="rounded-2xl border border-border bg-card p-6">
               <Mail className="h-5 w-5 text-secondary" />
               <p className="mt-3 text-xs uppercase tracking-wider text-muted-foreground">Email</p>
-              <a href="mailto:hello@wheelsonwheels.com" className="mt-1 block text-lg font-semibold hover:text-primary transition-colors break-all">
-                hello@wheelsonwheels.com
+              <a href="mailto:Wowtirellc@gmail.com" className="mt-1 block text-lg font-semibold hover:text-primary transition-colors break-all">
+                Wowtirellc@gmail.com
               </a>
             </li>
             <li className="rounded-2xl border border-border bg-card p-6">
               <Clock className="h-5 w-5 text-secondary" />
               <p className="mt-3 text-xs uppercase tracking-wider text-muted-foreground">Hours</p>
-              <p className="mt-1 text-base font-medium">Mon–Sat · 8am–6pm</p>
-              <p className="text-sm text-muted-foreground">Sunday by appointment</p>
+              <p className="mt-1 text-base font-medium">Mon–Sat · 9am–5pm</p>
+              <p className="text-sm text-muted-foreground"></p>
             </li>
             <li className="rounded-2xl border border-border bg-card p-6">
               <MapPin className="h-5 w-5 text-secondary" />
