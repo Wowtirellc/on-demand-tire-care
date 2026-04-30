@@ -1,5 +1,5 @@
 import { Gauge, Settings2, PackageCheck, Scale, Truck } from "lucide-react";
-import tpmsImage from "@/assets/tpms-detail.jpg";
+import tpmsImage from "@/assets/tpms-new.jpg";
 import tireIcon from "@/assets/icon-tire.png";
 import tpmsIcon from "@/assets/icon-tpms.png";
 import tpmsIconRed from "@/assets/icon-tpms-red.png";
@@ -78,8 +78,8 @@ const Services = () => {
             </h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               TPMS sensors fail every 5–10 years and require programming and a vehicle relearn after
-              replacement. We have the specialized tools and the know-how to do it right the first
-              time, so you drive away without warning lights or guesswork.
+              replacement. We install only AUTEL genuine TPMS sensors with 3 year warranty, so you
+              drive away without warning lights or guesswork.
             </p>
           </div>
         </div>
