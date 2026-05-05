@@ -94,7 +94,7 @@ const Services = () => {
               All 4 TPMS sensors replaced for <span className="text-primary">$200</span>
             </h4>
             <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
-              Tax and programming included. Offer valid through the end of May.
+              Tax, at home Instillation, and programming included. Offer valid through the end of May.
             </p>
           </div>
         </div>
