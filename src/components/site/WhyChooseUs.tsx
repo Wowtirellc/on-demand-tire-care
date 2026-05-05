@@ -9,7 +9,7 @@ type Reason = {
 };
 
 const reasons: Reason[] = [
-  { icon: Home, title: "We come to you", desc: "Home, office, or jobsite — your driveway becomes the shop." },
+  { icon: Home, title: "We come to you", desc: "Home, office, or jobsite - your driveway becomes the shop." },
   { icon: Clock, title: "No waiting rooms", desc: "Skip the lobby. Keep working, parenting, or relaxing." },
   { icon: CalendarRange, title: "Flexible scheduling", desc: "Available most days in the week, even some saturdays!" },
   { image: tpmsIconRed, title: "TPMS expertise", desc: "Sensors replaced and programmed - no more annoying warning light." },
