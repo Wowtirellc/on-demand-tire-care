@@ -11,10 +11,10 @@ type Reason = {
 const reasons: Reason[] = [
   { icon: Home, title: "We come to you", desc: "Home, office, or jobsite — your driveway becomes the shop." },
   { icon: Clock, title: "No waiting rooms", desc: "Skip the lobby. Keep working, parenting, or relaxing." },
-  { icon: CalendarRange, title: "Flexible scheduling", desc: "Book a window that actually works with your day." },
-  { image: tpmsIconRed, title: "TPMS expertise", desc: "Sensors replaced and programmed — no leftover warning lights." },
-  { icon: ReceiptText, title: "Transparent quotes", desc: "Clear pricing up front. No surprise add-ons at pickup." },
-  { icon: ShieldCheck, title: "Professional setup", desc: "Shop-grade trailer, tools, and torque specs at your address." },
+  { icon: CalendarRange, title: "Flexible scheduling", desc: "Available most days in the week, even some saturdays!" },
+  { image: tpmsIconRed, title: "TPMS expertise", desc: "Sensors replaced and programmed - no more annoying warning light." },
+  { icon: ReceiptText, title: "Transparent quotes", desc: "Clear pricing up front. All service fees, taxes, and disposal fees listed on quotes." },
+  { icon: ShieldCheck, title: "Professional setup", desc: "The same professional tools and equipment you would find in a tire shop, Brought to you!" },
 ];
 
 const WhyChooseUs = () => {
