@@ -41,9 +41,9 @@ const Services = () => {
           {services.map((s) => (
             <article
               key={s.title}
-              className="group rounded-2xl border border-border bg-card p-6 hover:border-secondary/40 hover:-translate-y-0.5 transition-all"
+              className="rounded-2xl border border-border bg-card p-6"
             >
-              <div className="h-11 w-11 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors">
+              <div className="h-11 w-11 rounded-lg bg-secondary/10 text-secondary flex items-center justify-center">
                 {s.image ? (
                   <img src={s.image} alt="" className="h-7 w-7 object-contain" />
                 ) : s.icon ? (

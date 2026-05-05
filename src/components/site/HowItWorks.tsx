@@ -33,7 +33,7 @@ const HowItWorks = () => {
           {steps.map((step, i) => (
             <li
               key={step.title}
-              className="relative rounded-2xl border border-border bg-card p-7 hover:border-primary/40 transition-colors"
+              className="relative rounded-2xl border border-border bg-card p-7"
             >
               <div className="flex items-center justify-between">
                 <div className="h-12 w-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
