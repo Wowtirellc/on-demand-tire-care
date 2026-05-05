@@ -28,7 +28,7 @@ const Services = () => {
           <div className="lg:col-span-7">
             <p className="text-sm font-medium text-primary uppercase tracking-wider">Services</p>
             <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
-              Everything a tire shop does - at your address.
+              Everything a tire shop does - at your front door.
             </h2>
           </div>
           <p className="lg:col-span-5 text-muted-foreground leading-relaxed">
@@ -74,7 +74,7 @@ const Services = () => {
               TPMS expertise
             </span>
             <h3 className="mt-4 text-2xl sm:text-3xl font-semibold">
-              That dashboard light? We make it disappear — properly.
+              That dashboard light? We make it disappear - FOR GOOD.
             </h3>
             <p className="mt-4 text-muted-foreground leading-relaxed">
               TPMS sensors fail every 5–10 years and require programming and a vehicle relearn after
