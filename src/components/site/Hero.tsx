@@ -1,9 +1,25 @@
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin, Clock, Gauge } from "lucide-react";
-const heroImage = "/hero-trailer-new.png";
+import { Phone, MapPin, Clock } from "lucide-react";
+import { useEffect, useState } from "react";
+import heroTrailer from "@/assets/hero-truck-trailer.jpeg";
+import heroInterior from "@/assets/hero-trailer-interior.jpeg";
+import heroLift from "@/assets/hero-suv-lift.jpg";
+const heroOriginal = "/hero-trailer-new.png";
 import { PHONE_DISPLAY, PHONE_TEL } from "./Navbar";
 
+const heroImages = [
+  { src: heroOriginal, alt: "Wheels on Wheels technician replacing a tire from a service trailer in a customer's driveway" },
+  { src: heroTrailer, alt: "Wheels on Wheels branded truck and mobile tire service trailer" },
+  { src: heroInterior, alt: "Inside the mobile tire service trailer with professional tire changer and balancer" },
+  { src: heroLift, alt: "SUV raised on a mobile lift for tire service" },
+];
+
 const Hero = () => {
+  const [current, setCurrent] = useState(0);
+  useEffect(() => {
+    const id = setInterval(() => setCurrent((c) => (c + 1) % heroImages.length), 18000);
+    return () => clearInterval(id);
+  }, []);
   return (
     <section id="top" className="relative bg-hero pt-28 pb-16 md:pt-36 md:pb-24 lg:pt-40 lg:pb-28 overflow-hidden">
       <div className="container relative">
@@ -48,14 +64,18 @@ const Hero = () => {
 
           <div className="lg:col-span-6">
             <div className="relative">
-              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-elegant ring-1 ring-border">
-                <img
-                  src={heroImage}
-                  alt="Wheels on Wheels technician replacing a tire from a service trailer in a customer's driveway"
-                  width={1920}
-                  height={1080}
-                  className="h-full w-full object-cover"
-                />
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-elegant ring-1 ring-border relative">
+                {heroImages.map((img, i) => (
+                  <img
+                    key={img.src}
+                    src={img.src}
+                    alt={img.alt}
+                    width={1920}
+                    height={1440}
+                    loading={i === 0 ? "eager" : "lazy"}
+                    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${i === current ? "opacity-100" : "opacity-0"}`}
+                  />
+                ))}
               </div>
               <div className="pointer-events-none absolute -top-10 -right-10 h-40 w-40 rounded-full bg-primary/20 blur-3xl" />
             </div>
