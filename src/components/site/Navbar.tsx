@@ -20,8 +20,8 @@ const Navbar = () => {
           />
         </a>
         <nav className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
-          <a href="#how" className="hover:text-foreground transition-colors">How it works</a>
           <a href="#services" className="hover:text-foreground transition-colors">Services</a>
+          <a href="#how" className="hover:text-foreground transition-colors">How it works</a>
           <a href="#why" className="hover:text-foreground transition-colors">Why us</a>
           <a href="#faq" className="hover:text-foreground transition-colors">FAQ</a>
         </nav>
