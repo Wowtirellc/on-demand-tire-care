@@ -19,7 +19,7 @@ const faqs = [
   },
   {
     q: "What areas do you cover?",
-    a: "Augusta and Rockingham County, Virginia. If you're nearby, ask — we'll let you know.",
+    a: "Augusta and Rockingham County, Virginia. If you're nearby, ask - we'll let you know.",
   },
   {
     q: "What payment methods do you accept?",
