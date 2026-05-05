@@ -83,6 +83,21 @@ const Services = () => {
             </p>
           </div>
         </div>
+
+        {/* Limited-time TPMS sale banner */}
+        <div className="mt-6 rounded-2xl border border-primary/40 bg-primary/10 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+          <span className="inline-flex shrink-0 items-center rounded-full bg-primary text-primary-foreground px-3 py-1 text-xs font-bold uppercase tracking-wider">
+            Limited time
+          </span>
+          <div className="flex-1">
+            <h4 className="text-lg sm:text-xl font-semibold">
+              All 4 TPMS sensors replaced for <span className="text-primary">$200</span>
+            </h4>
+            <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+              Tax and programming included. Offer valid through the end of May.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
