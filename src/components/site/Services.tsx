@@ -17,7 +17,7 @@ const services: Service[] = [
   { image: tpmsIcon, title: "TPMS sensor replacement", desc: "Replace failed/dying TPMS sensors with AUTEL genuine tire pressure sensors with warranty." },
   { icon: Settings2, title: "TPMS programming & relearn", desc: "Sensor programming and vehicle relearn so warning lights stay off." },
   { icon: PackageCheck, title: "Customer-supplied tires", desc: "We sell most major and minor tire brands. Found a better price or a tire we cant source? We will gladly install them!" },
-  { image: tireIcon, title: "Tire rotation & inspection", desc: "Quick rotations and visual inspections while we're on site." },
+  { image: tireIcon, title: "Minor tire repairs", desc: "We perform flat repairs on tires from road debris like screws or nails, just send a picture of the nail's location" },
 ];
 
 const Services = () => {
