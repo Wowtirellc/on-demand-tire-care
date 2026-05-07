@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import heroTrailer from "@/assets/hero-truck-trailer.jpeg";
 import heroInterior from "@/assets/hero-trailer-interior.jpeg";
 import heroLift from "@/assets/hero-suv-lift.jpg";
+import heroPorsche from "@/assets/hero-porsche-wheel.jpeg";
 const heroOriginal = "/hero-trailer-new.png";
 import { PHONE_DISPLAY, PHONE_TEL } from "./Navbar";
 
@@ -12,6 +13,7 @@ const heroImages = [
   { src: heroTrailer, alt: "Wheels on Wheels branded truck and mobile tire service trailer" },
   { src: heroInterior, alt: "Inside the mobile tire service trailer with professional tire changer and balancer" },
   { src: heroLift, alt: "SUV raised on a mobile lift for tire service" },
+  { src: heroPorsche, alt: "Freshly mounted Yokohama Geolandar tire on a Porsche alloy wheel during mobile service" },
 ];
 
 const Hero = () => {
