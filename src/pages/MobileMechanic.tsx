@@ -16,7 +16,7 @@ const services: Service[] = [
   { icon: Car, title: "Suspension work", desc: "Shocks, struts, control arms, sway bar links, and related components." },
   { icon: Gauge, title: "Check engine light diagnostics", desc: "Code pulls plus deeper diagnostics to find the actual root cause." },
   { icon: Cog, title: "Engine tune-ups", desc: "Spark plugs, ignition coils, filters, and routine performance restoration." },
-  { icon: BatteryCharging, title: "Battery replacement", desc: "Testing and replacement with quality batteries — installed on site." },
+  { icon: BatteryCharging, title: "Battery replacement", desc: "Testing and replacement with quality batteries - installed on site." },
   { icon: Wrench, title: "Starter & alternator replacement", desc: "Charging and starting system repairs done in your driveway." },
   { icon: Thermometer, title: "Radiator replacement", desc: "Radiator, hose, and cooling system repairs to prevent overheating." },
   { icon: ClipboardCheck, title: "General maintenance", desc: "Fluids, filters, belts, and scheduled service to keep things reliable." },
@@ -27,9 +27,9 @@ const MobileMechanic = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
-    name: "Wheels on Wheels — Mobile Mechanic",
+    name: "Wheels on Wheels - Mobile Mechanic",
     description:
-      "On-site mobile auto repair and maintenance in Augusta & Rockingham County, VA. Oil changes, brakes, suspension, diagnostics, batteries, and more — at your location.",
+      "On-site mobile auto repair and maintenance in Augusta & Rockingham County, VA. Oil changes, brakes, suspension, diagnostics, batteries, and more - at your location.",
     telephone: "+1-540-458-4737",
     areaServed: ["Augusta County, VA", "Rockingham County, VA"],
     serviceType: [
@@ -48,7 +48,7 @@ const MobileMechanic = () => {
 
   useEffect(() => {
     const prevTitle = document.title;
-    document.title = "Mobile Mechanic Services | On-Site Auto Repair — Wheels on Wheels";
+    document.title = "Mobile Mechanic Services | On-Site Auto Repair - Wheels on Wheels";
 
     const setMeta = (selector: string, attr: string, value: string, create?: () => HTMLElement) => {
       let el = document.head.querySelector<HTMLElement>(selector);
@@ -60,7 +60,7 @@ const MobileMechanic = () => {
       return el;
     };
 
-    const desc = "On-site mobile mechanic services in Augusta & Rockingham County, VA. Oil changes, brakes, suspension, diagnostics, batteries, and more — performed at your location.";
+    const desc = "On-site mobile mechanic services in Augusta & Rockingham County, VA. Oil changes, brakes, suspension, diagnostics, batteries, and more - performed at your location.";
     setMeta('meta[name="description"]', "content", desc, () => {
       const m = document.createElement("meta");
       m.setAttribute("name", "description");
@@ -129,7 +129,7 @@ const MobileMechanic = () => {
             </div>
             <p className="lg:col-span-7 text-muted-foreground leading-relaxed text-lg">
               Our mobile mechanic service handles a wide range of automotive repair and routine
-              maintenance — without the wait, the tow, or the trip to a shop. From quick oil changes
+              maintenance - without the wait, the tow, or the trip to a shop. From quick oil changes
               and battery swaps to brake jobs and check engine diagnostics, we come fully equipped to
               get the job done at your location.
             </p>
@@ -146,7 +146,7 @@ const MobileMechanic = () => {
               </h2>
               <p className="mt-5 text-muted-foreground leading-relaxed">
                 A focused list of the mobile mechanic services we offer. If you don't see your issue
-                listed, give us a call or send a quote request — we'll let you know if it's something
+                listed, give us a call or send a quote request - we'll let you know if it's something
                 we can take on.
               </p>
             </div>

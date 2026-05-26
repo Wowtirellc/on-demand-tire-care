@@ -194,7 +194,7 @@ const QuoteForm = () => {
               >
                 <Upload className="h-6 w-6 text-muted-foreground" />
                 <span className="text-sm font-medium">Tap to add photos</span>
-                <span className="text-xs text-muted-foreground">Tires, vehicle info, sidewall sizing — up to {MAX_FILES} images, {MAX_SIZE_MB}MB each</span>
+                <span className="text-xs text-muted-foreground">Tires, vehicle info, sidewall sizing - up to {MAX_FILES} images, {MAX_SIZE_MB}MB each</span>
                 <input
                   id="photos"
                   type="file"

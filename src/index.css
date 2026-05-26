@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Wheels on Wheels — dark editorial design system. All colors HSL. */
+/* Wheels on Wheels - dark editorial design system. All colors HSL. */
 
 @layer base {
   :root {
