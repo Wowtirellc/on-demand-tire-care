@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { Wrench, Droplet, Disc, Car, Gauge, BatteryCharging, Cog, Thermometer, ClipboardCheck, ScanLine, AlertTriangle } from "lucide-react";
+import { Wrench, Droplet, Disc, Car, Gauge, BatteryCharging, Cog, Thermometer, ClipboardCheck, AlertTriangle } from "lucide-react";
 import Navbar from "@/components/site/Navbar";
 import { Contact, Footer } from "@/components/site/Contact";
 import StickyCTA from "@/components/site/StickyCTA";
-import QuoteForm from "@/components/site/QuoteForm";
+import MobileMechanicQuoteForm from "@/components/site/MobileMechanicQuoteForm";
 import { Button } from "@/components/ui/button";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/components/site/Navbar";
 import { Phone } from "lucide-react";
