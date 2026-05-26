@@ -20,7 +20,7 @@ const services: Service[] = [
   { icon: Wrench, title: "Starter & alternator replacement", desc: "Charging and starting system repairs done in your driveway." },
   { icon: Thermometer, title: "Radiator replacement", desc: "Radiator, hose, and cooling system repairs to prevent overheating." },
   { icon: ClipboardCheck, title: "General maintenance", desc: "Fluids, filters, belts, and scheduled service to keep things reliable." },
-  { icon: ScanLine, title: "Diagnostic scans", desc: "Full vehicle scans across engine, transmission, ABS, airbag, and more." },
+  
 ];
 
 const MobileMechanic = () => {
