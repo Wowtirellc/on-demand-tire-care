@@ -184,8 +184,8 @@ const MobileMechanic = () => {
           </div>
         </section>
 
-        {/* Quote form (same as main site) */}
-        <QuoteForm />
+        {/* Quote form (mobile mechanic specific) */}
+        <MobileMechanicQuoteForm />
 
         <Contact />
       </main>
