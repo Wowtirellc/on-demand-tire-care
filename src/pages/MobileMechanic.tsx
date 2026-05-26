@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 import { Wrench, Droplet, Disc, Car, Gauge, BatteryCharging, Cog, Thermometer, ClipboardCheck, ScanLine, AlertTriangle } from "lucide-react";
 import Navbar from "@/components/site/Navbar";
 import { Contact, Footer } from "@/components/site/Contact";
@@ -46,24 +46,46 @@ const MobileMechanic = () => {
     ],
   };
 
+  useEffect(() => {
+    const prevTitle = document.title;
+    document.title = "Mobile Mechanic Services | On-Site Auto Repair — Wheels on Wheels";
+
+    const setMeta = (selector: string, attr: string, value: string, create?: () => HTMLElement) => {
+      let el = document.head.querySelector<HTMLElement>(selector);
+      if (!el && create) {
+        el = create();
+        document.head.appendChild(el);
+      }
+      el?.setAttribute(attr, value);
+      return el;
+    };
+
+    const desc = "On-site mobile mechanic services in Augusta & Rockingham County, VA. Oil changes, brakes, suspension, diagnostics, batteries, and more — performed at your location.";
+    setMeta('meta[name="description"]', "content", desc, () => {
+      const m = document.createElement("meta");
+      m.setAttribute("name", "description");
+      return m;
+    });
+    setMeta('link[rel="canonical"]', "href", "https://wowtires.com/mobile-mechanic", () => {
+      const l = document.createElement("link");
+      l.setAttribute("rel", "canonical");
+      return l;
+    });
+
+    const ld = document.createElement("script");
+    ld.type = "application/ld+json";
+    ld.text = JSON.stringify(jsonLd);
+    ld.dataset.page = "mobile-mechanic";
+    document.head.appendChild(ld);
+
+    return () => {
+      document.title = prevTitle;
+      document.head.querySelectorAll('script[data-page="mobile-mechanic"]').forEach((n) => n.remove());
+    };
+  }, []);
+
   return (
     <div className="min-h-screen bg-background text-foreground">
-      <Helmet>
-        <title>Mobile Mechanic Services | On-Site Auto Repair — Wheels on Wheels</title>
-        <meta
-          name="description"
-          content="On-site mobile mechanic services in Augusta & Rockingham County, VA. Oil changes, brakes, suspension, diagnostics, batteries, and more — performed at your location."
-        />
-        <link rel="canonical" href="https://wowtires.com/mobile-mechanic" />
-        <meta property="og:title" content="Mobile Mechanic Services — Wheels on Wheels" />
-        <meta
-          property="og:description"
-          content="Convenient on-site auto repair and maintenance at your home, office, or jobsite."
-        />
-        <meta property="og:url" content="https://wowtires.com/mobile-mechanic" />
-        <meta property="og:type" content="website" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
 
       <Navbar />
 

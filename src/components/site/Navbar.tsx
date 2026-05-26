@@ -1,4 +1,5 @@
-import { Phone } from "lucide-react";
+import { Phone, Wrench } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const PHONE_DISPLAY = "540-45-TIRES";
 const PHONE_TEL = "5404584737"; // 540-458-4737
@@ -20,12 +21,19 @@ const Navbar = () => {
           />
         </a>
         <nav className="hidden md:flex items-center gap-7 text-sm text-muted-foreground">
-          <a href="#services" className="hover:text-foreground transition-colors">Services</a>
-          <a href="#how" className="hover:text-foreground transition-colors">How it works</a>
-          <a href="#why" className="hover:text-foreground transition-colors">Why us</a>
-          <a href="#faq" className="hover:text-foreground transition-colors">FAQ</a>
+          <a href="/#services" className="hover:text-foreground transition-colors">Services</a>
+          <a href="/#how" className="hover:text-foreground transition-colors">How it works</a>
+          <a href="/#why" className="hover:text-foreground transition-colors">Why us</a>
+          <a href="/#faq" className="hover:text-foreground transition-colors">FAQ</a>
+          <Link
+            to="/mobile-mechanic"
+            className="inline-flex items-center gap-1.5 rounded-md border border-primary/40 bg-primary/10 text-primary px-3 py-1.5 font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
+          >
+            <Wrench className="h-4 w-4" />
+            Mobile Mechanic
+          </Link>
         </nav>
-        <a
+        <
           href={`tel:${PHONE_TEL}`}
           className="hidden sm:inline-flex items-center gap-2 rounded-md border border-secondary/50 px-3 py-2 text-sm font-medium text-secondary hover:bg-secondary/10 transition-colors"
         >
