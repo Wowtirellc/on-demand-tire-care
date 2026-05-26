@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { Wrench, Droplet, Disc, Car, Gauge, BatteryCharging, Cog, Thermometer, ClipboardCheck, ScanLine, AlertTriangle } from "lucide-react";
+import { Wrench, Droplet, Disc, Car, Gauge, BatteryCharging, Cog, Thermometer, ClipboardCheck, AlertTriangle } from "lucide-react";
 import Navbar from "@/components/site/Navbar";
 import { Contact, Footer } from "@/components/site/Contact";
 import StickyCTA from "@/components/site/StickyCTA";
-import QuoteForm from "@/components/site/QuoteForm";
+import MobileMechanicQuoteForm from "@/components/site/MobileMechanicQuoteForm";
 import { Button } from "@/components/ui/button";
 import { PHONE_DISPLAY, PHONE_TEL } from "@/components/site/Navbar";
 import { Phone } from "lucide-react";
@@ -20,7 +20,7 @@ const services: Service[] = [
   { icon: Wrench, title: "Starter & alternator replacement", desc: "Charging and starting system repairs done in your driveway." },
   { icon: Thermometer, title: "Radiator replacement", desc: "Radiator, hose, and cooling system repairs to prevent overheating." },
   { icon: ClipboardCheck, title: "General maintenance", desc: "Fluids, filters, belts, and scheduled service to keep things reliable." },
-  { icon: ScanLine, title: "Diagnostic scans", desc: "Full vehicle scans across engine, transmission, ABS, airbag, and more." },
+  
 ];
 
 const MobileMechanic = () => {
@@ -184,8 +184,8 @@ const MobileMechanic = () => {
           </div>
         </section>
 
-        {/* Quote form (same as main site) */}
-        <QuoteForm />
+        {/* Quote form (mobile mechanic specific) */}
+        <MobileMechanicQuoteForm />
 
         <Contact />
       </main>
