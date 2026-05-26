@@ -3,7 +3,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 const faqs = [
   {
     q: "Is this roadside assistance?",
-    a: "No. We're a scheduled mobile tire service. We come to your home or workplace at a time you choose — we don't operate as a roadside emergency service.",
+    a: "No. We're a scheduled mobile tire service. We come to your home or workplace at a time you choose - we don't operate as a roadside emergency service.",
   },
   {
     q: "Do you handle TPMS warning lights?",

@@ -7,7 +7,7 @@ const items = [
     location: "Staunton, VA",
   },
   {
-    quote: "Finally got my TPMS light fixed properly. Other shops kept resetting it — these folks actually programmed new sensors.",
+    quote: "Finally got my TPMS light fixed properly. Other shops kept resetting it - these folks actually programmed new sensors.",
     name: "Jenna R.",
     location: "Harrisonburg, VA",
   },
@@ -41,7 +41,7 @@ const Testimonials = () => {
               </blockquote>
               <figcaption className="mt-6 text-sm">
                 <span className="font-semibold">{t.name}</span>
-                <span className="text-muted-foreground"> — {t.location}</span>
+                <span className="text-muted-foreground"> - {t.location}</span>
               </figcaption>
             </figure>
           ))}
