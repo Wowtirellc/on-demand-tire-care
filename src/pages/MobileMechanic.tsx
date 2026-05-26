@@ -100,7 +100,7 @@ const MobileMechanic = () => {
               </h1>
               <p className="mt-6 text-lg sm:text-xl text-muted-foreground leading-relaxed">
                 Skip the shop. We bring convenient automotive repair and maintenance directly to your
-                home, office, or jobsite — performed by an experienced technician with the right tools
+                home, office, or jobsite - performed by an experienced technician with the right tools
                 for the job.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-3">
@@ -177,7 +177,7 @@ const MobileMechanic = () => {
                 </h3>
                 <p className="mt-2 text-muted-foreground leading-relaxed">
                   We only install parts sourced directly through our approved suppliers. This ensures
-                  quality, warranty coverage, and reliable workmanship on every job.
+                  quality, warranty coverage, and correct parts for every job.
                 </p>
               </div>
             </div>
