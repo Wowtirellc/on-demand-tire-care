@@ -109,8 +109,8 @@ const MobileMechanicQuoteForm = () => {
               Request Mobile Mechanic Service Quote
             </h2>
             <p className="mt-5 text-muted-foreground leading-relaxed">
-              Tell us what repair or maintenance service you need and we'll contact you with pricing
-              and availability.
+              Ready to skip the shop waiting room? Tell us what repair or maintenance service you
+              need and we'll contact you with pricing and availability.
             </p>
             <ul className="mt-8 space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2"><span className="h-1.5 w-1.5 rounded-full bg-secondary" /> No obligation</li>
