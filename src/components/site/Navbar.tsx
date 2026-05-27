@@ -1,5 +1,4 @@
-import { Phone, Wrench } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Phone } from "lucide-react";
 
 const PHONE_DISPLAY = "540-45-TIRES";
 const PHONE_TEL = "5404584737"; // 540-458-4737
