@@ -24,13 +24,6 @@ const Navbar = () => {
           <a href="/#how" className="hover:text-foreground transition-colors">How it works</a>
           <a href="/#why" className="hover:text-foreground transition-colors">Why us</a>
           <a href="/#faq" className="hover:text-foreground transition-colors">FAQ</a>
-          <Link
-            to="/mobile-mechanic"
-            className="inline-flex items-center gap-1.5 rounded-md border border-primary/40 bg-primary/10 text-primary px-3 py-1.5 font-medium hover:bg-primary hover:text-primary-foreground transition-colors"
-          >
-            <Wrench className="h-4 w-4" />
-            Mobile Mechanic
-          </Link>
         </nav>
         <a
           href={`tel:${PHONE_TEL}`}
