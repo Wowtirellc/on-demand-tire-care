@@ -91,10 +91,10 @@ const Services = () => {
           </span>
           <div className="flex-1">
             <h4 className="text-lg sm:text-xl font-semibold">
-              All 4 TPMS sensors replaced for <span className="text-primary">$200</span>
+              All 4 TPMS sensors replaced for <span className="text-primary">$180</span>
             </h4>
             <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
-              Tax, at home installation, and programming included. Offer valid through the end of May.
+              Tax, at home installation, and programming included. Offer valid through the end of June.
             </p>
           </div>
         </div>
