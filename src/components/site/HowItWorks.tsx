@@ -1,4 +1,6 @@
 import { ClipboardList, CalendarCheck, Wrench } from "lucide-react";
+import RevealGroup from "@/components/site/RevealGroup";
+import Reveal from "./Reveal";
 
 const steps = [
   {
@@ -29,7 +31,12 @@ const HowItWorks = () => {
           </h2>
         </div>
 
-        <ol className="mt-14 grid gap-6 md:grid-cols-3">
+        <RevealGroup
+          className="mt-14 grid gap-6 md:grid-cols-3"
+          childClassName=""
+          direction="up"
+          staggerDelay={150}
+        >
           {steps.map((step, i) => (
             <li
               key={step.title}
@@ -45,7 +52,7 @@ const HowItWorks = () => {
               <p className="mt-2 text-muted-foreground leading-relaxed text-sm">{step.desc}</p>
             </li>
           ))}
-        </ol>
+        </RevealGroup>
       </div>
     </section>
   );

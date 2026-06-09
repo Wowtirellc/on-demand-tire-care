@@ -1,5 +1,6 @@
 import { Home, Clock, CalendarRange, ReceiptText, ShieldCheck } from "lucide-react";
 import tpmsIconRed from "@/assets/icon-tpms-red.png";
+import RevealGroup from "@/components/site/RevealGroup";
 
 type Reason = {
   icon?: React.ComponentType<{ className?: string }>;
@@ -28,7 +29,12 @@ const WhyChooseUs = () => {
           </h2>
         </div>
 
-        <ul className="mt-14 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+        <RevealGroup
+          className="mt-14 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3"
+          childClassName=""
+          direction="up"
+          staggerDelay={100}
+        >
           {reasons.map((r) => (
             <li key={r.title} className="flex gap-4">
               <div className="shrink-0 h-11 w-11 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
@@ -44,7 +50,7 @@ const WhyChooseUs = () => {
               </div>
             </li>
           ))}
-        </ul>
+        </RevealGroup>
       </div>
     </section>
   );

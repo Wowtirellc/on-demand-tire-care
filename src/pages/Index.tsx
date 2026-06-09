@@ -1,3 +1,4 @@
+import Reveal from "@/components/site/Reveal";
 import Navbar from "@/components/site/Navbar";
 import Hero from "@/components/site/Hero";
 import HowItWorks from "@/components/site/HowItWorks";
@@ -29,14 +30,28 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
-        <Services />
-        <HowItWorks />
-        <QuoteForm />
-        <WhyChooseUs />
-        <ServiceArea />
-        <FAQ />
+        <Reveal direction="up">
+          <Services />
+        </Reveal>
+        <Reveal direction="up">
+          <HowItWorks />
+        </Reveal>
+        <Reveal direction="up">
+          <QuoteForm />
+        </Reveal>
+        <Reveal direction="up">
+          <WhyChooseUs />
+        </Reveal>
+        <Reveal direction="up">
+          <ServiceArea />
+        </Reveal>
+        <Reveal direction="up">
+          <FAQ />
+        </Reveal>
         {/* <Testimonials /> Temporarily hidden until we have legitimate reviews. Re-enable to restore. */}
-        <Contact />
+        <Reveal direction="up">
+          <Contact />
+        </Reveal>
       </main>
       <Footer />
       <StickyCTA />
