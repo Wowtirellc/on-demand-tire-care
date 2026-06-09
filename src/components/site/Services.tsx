@@ -1,8 +1,11 @@
+import RevealGroup from "@/components/site/RevealGroup";
 import { Gauge, Settings2, PackageCheck, Scale, Truck } from "lucide-react";
 import tpmsImage from "@/assets/tpms-new.jpg";
 import tireIcon from "@/assets/icon-tire.png";
 import tpmsIcon from "@/assets/icon-tpms.png";
 import tpmsIconRed from "@/assets/icon-tpms-red.png";
+
+import Reveal from "./Reveal";
 
 type Service = {
   icon?: React.ComponentType<{ className?: string }>;
@@ -37,7 +40,12 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <RevealGroup
+          className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+          childClassName=""
+          direction="up"
+          staggerDelay={100}
+        >
           {services.map((s) => (
             <article
               key={s.title}
@@ -54,50 +62,54 @@ const Services = () => {
               <p className="mt-2 text-sm text-muted-foreground leading-relaxed">{s.desc}</p>
             </article>
           ))}
-        </div>
+        </RevealGroup>
 
         {/* TPMS feature strip */}
-        <div className="mt-16 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center rounded-3xl border border-border bg-card overflow-hidden">
-          <div className="aspect-[4/3] lg:aspect-auto lg:h-full">
-            <img
-              src={tpmsImage}
-              alt="Technician programming a TPMS tire pressure sensor with a diagnostic tool"
-              loading="lazy"
-              width={1024}
-              height={1024}
-              className="h-full w-full object-cover"
-            />
+        <Reveal direction="up" delay={200}>
+          <div className="mt-16 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center rounded-3xl border border-border bg-card overflow-hidden">
+            <div className="aspect-[4/3] lg:aspect-auto lg:h-full">
+              <img
+                src={tpmsImage}
+                alt="Technician programming a TPMS tire pressure sensor with a diagnostic tool"
+                loading="lazy"
+                width={1024}
+                height={1024}
+                className="h-full w-full object-cover"
+              />
+            </div>
+            <div className="p-8 lg:p-12">
+              <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-medium uppercase tracking-wider">
+                <img src={tpmsIconRed} alt="" className="h-4 w-4 object-contain" />
+                TPMS expertise
+              </span>
+              <h3 className="mt-4 text-2xl sm:text-3xl font-semibold">
+                That dashboard light? We make it disappear - FOR GOOD.
+              </h3>
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+                TPMS sensors fail every 5–10 years and require programming and a vehicle relearn after
+                replacement. We install only AUTEL genuine TPMS sensors with 3 year warranty, so you
+                drive away without warning lights or guesswork.
+              </p>
+            </div>
           </div>
-          <div className="p-8 lg:p-12">
-            <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-medium uppercase tracking-wider">
-              <img src={tpmsIconRed} alt="" className="h-4 w-4 object-contain" />
-              TPMS expertise
-            </span>
-            <h3 className="mt-4 text-2xl sm:text-3xl font-semibold">
-              That dashboard light? We make it disappear - FOR GOOD.
-            </h3>
-            <p className="mt-4 text-muted-foreground leading-relaxed">
-              TPMS sensors fail every 5–10 years and require programming and a vehicle relearn after
-              replacement. We install only AUTEL genuine TPMS sensors with 3 year warranty, so you
-              drive away without warning lights or guesswork.
-            </p>
-          </div>
-        </div>
+        </Reveal>
 
         {/* Limited-time TPMS sale banner */}
-        <div className="mt-6 rounded-2xl border border-primary/40 bg-primary/10 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-          <span className="inline-flex shrink-0 items-center rounded-full bg-primary text-primary-foreground px-3 py-1 text-xs font-bold uppercase tracking-wider">
-            Limited time
-          </span>
-          <div className="flex-1">
-            <h4 className="text-lg sm:text-xl font-semibold">
-              TPMS sensors replaced for just <span className="text-primary">$45</span> each
-            </h4>
-            <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
-              Tax, at home installation, and programming included. Offer valid through the end of June.
-            </p>
+        <Reveal direction="up" delay={200}>
+          <div className="mt-6 rounded-2xl border border-primary/40 bg-primary/10 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
+            <span className="inline-flex shrink-0 items-center rounded-full bg-primary text-primary-foreground px-3 py-1 text-xs font-bold uppercase tracking-wider">
+              Limited time
+            </span>
+            <div className="flex-1">
+              <h4 className="text-lg sm:text-xl font-semibold">
+                TPMS sensors replaced for just <span className="text-primary">$45</span> each
+              </h4>
+              <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+                Tax, at home installation, and programming included. Offer valid through the end of June.
+              </p>
+            </div>
           </div>
-        </div>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,4 +1,6 @@
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import RevealGroup from "@/components/site/RevealGroup";
+import Reveal from "./Reveal";
 
 const faqs = [
   {
@@ -35,13 +37,21 @@ const FAQ = () => {
   return (
     <section id="faq" className="py-20 md:py-28 bg-muted/30 border-y border-border">
       <div className="container max-w-4xl">
-        <div className="text-center">
-          <p className="text-sm font-medium text-primary uppercase tracking-wider">FAQ</p>
-          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
-            Common questions, answered.
-          </h2>
-        </div>
-        <Accordion type="single" collapsible className="mt-12">
+        <Reveal direction="up">
+          <div className="text-center">
+            <p className="text-sm font-medium text-primary uppercase tracking-wider">FAQ</p>
+            <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
+              Common questions, answered.
+            </h2>
+          </div>
+        </Reveal>
+        <RevealGroup
+          className="mt-12"
+          childClassName=""
+          direction="up"
+          staggerDelay={80}
+          baseDelay={100}
+        >
           {faqs.map((f, i) => (
             <AccordionItem key={i} value={`item-${i}`} className="border-border">
               <AccordionTrigger className="text-left text-base sm:text-lg font-semibold hover:no-underline hover:text-primary">
@@ -52,7 +62,7 @@ const FAQ = () => {
               </AccordionContent>
             </AccordionItem>
           ))}
-        </Accordion>
+        </RevealGroup>
       </div>
     </section>
   );
