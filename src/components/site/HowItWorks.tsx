@@ -16,7 +16,7 @@ const steps = [
   {
     icon: Wrench,
     title: "We come to you",
-    desc: "Our mobile tire shop comes to you at the scheduled time and we take care of all scheduled tire needs.",
+    desc: "Our mobile team arrives at the scheduled time and handles all your tire needs on site.",
   },
 ];
 
