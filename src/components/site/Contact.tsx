@@ -33,31 +33,31 @@ const Contact = () => {
           </Reveal>
 
           <RevealGroup className="grid sm:grid-cols-2 gap-4" direction="up" staggerDelay={100}>
-            <li className="rounded-2xl border border-border bg-card p-6">
+            <div className="rounded-2xl border border-border bg-card p-6 h-full flex flex-col">
               <Phone className="h-5 w-5 text-secondary" />
               <p className="mt-3 text-xs uppercase tracking-wider text-muted-foreground">Phone / Text</p>
               <a href={`tel:${PHONE_TEL}`} className="mt-1 block text-lg font-semibold hover:text-primary transition-colors">
                 {PHONE_DISPLAY}
               </a>
-            </li>
-            <li className="rounded-2xl border border-border bg-card p-6">
+            </div>
+            <div className="rounded-2xl border border-border bg-card p-6 h-full flex flex-col">
               <Mail className="h-5 w-5 text-secondary" />
               <p className="mt-3 text-xs uppercase tracking-wider text-muted-foreground">Email</p>
               <a href="mailto:Wowtirellc@gmail.com" className="mt-1 block text-lg font-semibold hover:text-primary transition-colors break-all">
                 Wowtirellc@gmail.com
               </a>
-            </li>
-            <li className="rounded-2xl border border-border bg-card p-6">
+            </div>
+            <div className="rounded-2xl border border-border bg-card p-6 h-full flex flex-col">
               <Clock className="h-5 w-5 text-secondary" />
               <p className="mt-3 text-xs uppercase tracking-wider text-muted-foreground">Hours</p>
               <p className="mt-1 text-base font-medium">Mon–Sat · 9am–5pm</p>
               <p className="text-sm text-muted-foreground"></p>
-            </li>
-            <li className="rounded-2xl border border-border bg-card p-6">
+            </div>
+            <div className="rounded-2xl border border-border bg-card p-6 h-full flex flex-col">
               <MapPin className="h-5 w-5 text-secondary" />
               <p className="mt-3 text-xs uppercase tracking-wider text-muted-foreground">Service area</p>
               <p className="mt-1 text-base font-medium">Augusta & Rockingham County, VA</p>
-            </li>
+            </div>
           </RevealGroup>
         </div>
       </div>
