@@ -16,7 +16,8 @@ const steps = [
   {
     icon: Wrench,
     title: "We come to you",
-    desc: "Our mobile team arrives at the scheduled time and handles all your tire needs on site.",
+    desc: "Our mobile tire shop comes to you and handles everything on site.",
+
   },
 ];
 
@@ -27,7 +28,8 @@ const HowItWorks = () => {
         <div className="max-w-2xl">
           <p className="text-sm font-medium text-primary uppercase tracking-wider">How it works</p>
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
-            Three simple steps. No waiting rooms.
+            Three simple steps. Zero shop waiting rooms.
+
           </h2>
         </div>
 
