@@ -16,7 +16,7 @@ type Service = {
 
 const services: Service[] = [
   { icon: Truck, title: "Mobile tire replacement", desc: "Full tire swap-outs at your driveway, parking lot, or jobsite." },
-  { icon: Scale, title: "Mounting & balancing", desc: "Computer balancing on professional shop-grade equipment." },
+  { icon: Scale, title: "Mounting & balancing", desc: "Computer balancing on professional-grade equipment." },
   { image: tpmsIcon, title: "TPMS sensor replacement", desc: "Replace failed/dying TPMS sensors with AUTEL genuine tire pressure sensors with warranty." },
   { icon: Settings2, title: "TPMS programming & relearn", desc: "Sensor programming and vehicle relearn so warning lights stay off." },
   { icon: PackageCheck, title: "Customer-supplied tires", desc: "We sell most major and minor tire brands. Found a better price or a tire we cant source? We will gladly install them!" },
@@ -31,7 +31,7 @@ const Services = () => {
           <div className="lg:col-span-7">
             <p className="text-sm font-medium text-primary uppercase tracking-wider">Services</p>
             <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
-              Everything a tire shop does - at your front door.
+              Full-service tire care - at your front door.
             </h2>
           </div>
           <p className="lg:col-span-5 text-muted-foreground leading-relaxed">

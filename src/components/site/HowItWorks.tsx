@@ -16,7 +16,7 @@ const steps = [
   {
     icon: Wrench,
     title: "We come to you",
-    desc: "Our mobile tire shop comes to you at the scheduled time and we take care of all scheduled tire needs.",
+    desc: "Our mobile team arrives at the scheduled time and handles all your tire needs on site.",
   },
 ];
 
@@ -27,7 +27,7 @@ const HowItWorks = () => {
         <div className="max-w-2xl">
           <p className="text-sm font-medium text-primary uppercase tracking-wider">How it works</p>
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
-            Three simple steps. Zero shop waiting rooms.
+            Three simple steps. No waiting rooms.
           </h2>
         </div>
 
@@ -38,7 +38,7 @@ const HowItWorks = () => {
           staggerDelay={150}
         >
           {steps.map((step, i) => (
-            <li
+            <div
               key={step.title}
               className="relative rounded-2xl border border-border bg-card p-7"
             >
@@ -50,7 +50,7 @@ const HowItWorks = () => {
               </div>
               <h3 className="mt-6 text-xl font-semibold">{step.title}</h3>
               <p className="mt-2 text-muted-foreground leading-relaxed text-sm">{step.desc}</p>
-            </li>
+            </div>
           ))}
         </RevealGroup>
       </div>
