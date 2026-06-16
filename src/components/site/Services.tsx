@@ -16,7 +16,7 @@ type Service = {
 
 const services: Service[] = [
   { icon: Truck, title: "Mobile tire replacement", desc: "Full tire swap-outs at your driveway, parking lot, or jobsite." },
-  { icon: Scale, title: "Mounting & balancing", desc: "Computer balancing on professional shop-grade equipment." },
+  { icon: Scale, title: "Mounting & balancing", desc: "Computer balancing on professional-grade equipment." },
   { image: tpmsIcon, title: "TPMS sensor replacement", desc: "Replace failed/dying TPMS sensors with AUTEL genuine tire pressure sensors with warranty." },
   { icon: Settings2, title: "TPMS programming & relearn", desc: "Sensor programming and vehicle relearn so warning lights stay off." },
   { icon: PackageCheck, title: "Customer-supplied tires", desc: "We sell most major and minor tire brands. Found a better price or a tire we cant source? We will gladly install them!" },
