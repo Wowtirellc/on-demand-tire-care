@@ -59,24 +59,6 @@ const Testimonials = () => {
               "{quote}"
             </blockquote>
           </figure>
-          <div className="mt-6 flex justify-center gap-2">
-            {order.map((_, i) => (
-              <button
-                key={i}
-                aria-label={`Show review ${i + 1}`}
-                onClick={() => {
-                  setVisible(false);
-                  setTimeout(() => {
-                    setPos(i);
-                    setVisible(true);
-                  }, 200);
-                }}
-                className={`h-2 rounded-full transition-all ${
-                  i === pos ? "w-6 bg-primary" : "w-2 bg-border hover:bg-muted-foreground/50"
-                }`}
-              />
-            ))}
-          </div>
         </div>
       </div>
     </section>
