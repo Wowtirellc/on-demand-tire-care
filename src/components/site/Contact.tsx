@@ -1,4 +1,4 @@
-import { Phone, Mail, Clock, MapPin } from "lucide-react";
+import { Phone, Clock, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PHONE_DISPLAY, PHONE_TEL } from "./Navbar";
 import Reveal from "./Reveal";
@@ -38,13 +38,6 @@ const Contact = () => {
               <p className="mt-3 text-xs uppercase tracking-wider text-muted-foreground">Phone / Text</p>
               <a href={`tel:${PHONE_TEL}`} className="mt-1 block text-lg font-semibold hover:text-primary transition-colors">
                 {PHONE_DISPLAY}
-              </a>
-            </div>
-            <div className="rounded-2xl border border-border bg-card p-6 h-full flex flex-col">
-              <Mail className="h-5 w-5 text-secondary" />
-              <p className="mt-3 text-xs uppercase tracking-wider text-muted-foreground">Email</p>
-              <a href="mailto:Wowtirellc@gmail.com" className="mt-1 block text-lg font-semibold hover:text-primary transition-colors break-all">
-                Wowtirellc@gmail.com
               </a>
             </div>
             <div className="rounded-2xl border border-border bg-card p-6 h-full flex flex-col">
