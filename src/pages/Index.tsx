@@ -48,7 +48,10 @@ const Index = () => {
         <Reveal direction="up">
           <FAQ />
         </Reveal>
-        {/* <Testimonials /> Temporarily hidden until we have legitimate reviews. Re-enable to restore. */}
+        <Reveal direction="up">
+          <Testimonials />
+        </Reveal>
+
         <Reveal direction="up">
           <Contact />
         </Reveal>
