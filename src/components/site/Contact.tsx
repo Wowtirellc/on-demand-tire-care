@@ -1,4 +1,4 @@
-import { Phone, Mail, Clock, MapPin } from "lucide-react";
+import { Phone, Clock, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { PHONE_DISPLAY, PHONE_TEL } from "./Navbar";
 import Reveal from "./Reveal";
