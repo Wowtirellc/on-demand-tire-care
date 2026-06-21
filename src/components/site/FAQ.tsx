@@ -30,6 +30,10 @@ const faqs = [
     q: "Do you do oil changes and brake work?",
     a: "No we are not authorized to handle hazardous waste like oil, anti-freeze, or brake fluid. Our primary focus is providing affordable and convenient tire replacements/service",
   },
+  {
+    q: "Do you repair wheel rims?",
+    a: "No. Most modern wheels are aluminum and can't be safely repaired. We focus on tire replacement and TPMS service.",
+  },
 ];
 
 const FAQ = () => {
