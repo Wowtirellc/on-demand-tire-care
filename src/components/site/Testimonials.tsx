@@ -29,7 +29,7 @@ const Testimonials = () => {
         setPos((p) => (p + 1) % order.length);
         setVisible(true);
       }, 350);
-    }, 6000);
+    }, 9000);
     return () => clearInterval(interval);
   }, [order.length]);
 
