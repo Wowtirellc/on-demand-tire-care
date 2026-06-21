@@ -31,6 +31,9 @@ const Index = () => {
       <main>
         <Hero />
         <Reveal direction="up">
+          <Testimonials />
+        </Reveal>
+        <Reveal direction="up">
           <Services />
         </Reveal>
         <Reveal direction="up">
@@ -48,9 +51,7 @@ const Index = () => {
         <Reveal direction="up">
           <FAQ />
         </Reveal>
-        <Reveal direction="up">
-          <Testimonials />
-        </Reveal>
+
 
         <Reveal direction="up">
           <Contact />

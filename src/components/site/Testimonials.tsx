@@ -1,3 +1,4 @@
+import { useEffect, useMemo, useState } from "react";
 import { Star } from "lucide-react";
 
 const items = [
@@ -7,29 +8,75 @@ const items = [
   "Great price and communication. Will use again",
 ];
 
+const shuffle = <T,>(arr: T[]) => {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+};
+
 const Testimonials = () => {
+  const order = useMemo(() => shuffle(items.map((_, i) => i)), []);
+  const [pos, setPos] = useState(0);
+  const [visible, setVisible] = useState(true);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisible(false);
+      setTimeout(() => {
+        setPos((p) => (p + 1) % order.length);
+        setVisible(true);
+      }, 350);
+    }, 6000);
+    return () => clearInterval(interval);
+  }, [order.length]);
+
+  const quote = items[order[pos]];
+
   return (
     <section className="py-20 md:py-28 bg-background">
       <div className="container">
-        <div className="max-w-2xl">
+        <div className="max-w-2xl mx-auto text-center">
           <p className="text-sm font-medium text-primary uppercase tracking-wider">Reviews</p>
           <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-semibold text-balance">
             People who skipped the tire shop.
           </h2>
         </div>
-        <div className="mt-14 grid gap-6 md:grid-cols-2">
-          {items.map((quote, i) => (
-            <figure key={i} className="rounded-2xl border border-border bg-card p-6 flex flex-col">
-              <div className="flex gap-0.5 text-secondary">
-                {Array.from({ length: 5 }).map((_, j) => (
-                  <Star key={j} className="h-4 w-4 fill-current" />
-                ))}
-              </div>
-              <blockquote className="mt-4 text-foreground/90 leading-relaxed flex-1">
-                "{quote}"
-              </blockquote>
-            </figure>
-          ))}
+        <div className="mt-12 max-w-3xl mx-auto">
+          <figure
+            className={`rounded-2xl border border-border bg-card p-8 md:p-10 flex flex-col items-center text-center min-h-[220px] transition-opacity duration-300 ${
+              visible ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <div className="flex gap-0.5 text-secondary">
+              {Array.from({ length: 5 }).map((_, j) => (
+                <Star key={j} className="h-5 w-5 fill-current" />
+              ))}
+            </div>
+            <blockquote className="mt-5 text-lg md:text-xl text-foreground/90 leading-relaxed">
+              "{quote}"
+            </blockquote>
+          </figure>
+          <div className="mt-6 flex justify-center gap-2">
+            {order.map((_, i) => (
+              <button
+                key={i}
+                aria-label={`Show review ${i + 1}`}
+                onClick={() => {
+                  setVisible(false);
+                  setTimeout(() => {
+                    setPos(i);
+                    setVisible(true);
+                  }, 200);
+                }}
+                className={`h-2 rounded-full transition-all ${
+                  i === pos ? "w-6 bg-primary" : "w-2 bg-border hover:bg-muted-foreground/50"
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
