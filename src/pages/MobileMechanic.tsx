@@ -27,11 +27,23 @@ const MobileMechanic = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
+    "@id": "https://www.wowtires.com/mobile-mechanic#business",
     name: "Wheels on Wheels - Mobile Mechanic",
+    url: "https://www.wowtires.com/mobile-mechanic",
+    image: "https://www.wowtires.com/og-image.jpg",
     description:
       "On-site mobile auto repair and maintenance in Augusta & Rockingham County, VA. Oil changes, brakes, suspension, diagnostics, batteries, and more - at your location.",
     telephone: "+1-540-458-4737",
-    areaServed: ["Augusta County, VA", "Rockingham County, VA"],
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Augusta County, Virginia" },
+      { "@type": "AdministrativeArea", name: "Rockingham County, Virginia" },
+    ],
+    openingHoursSpecification: [{
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:00",
+      closes: "17:00",
+    }],
     serviceType: [
       "Mobile oil change",
       "Mobile brake service",
@@ -42,7 +54,6 @@ const MobileMechanic = () => {
       "Starter and alternator replacement",
       "Radiator replacement",
       "General maintenance",
-      "Diagnostic scans",
     ],
   };
 
