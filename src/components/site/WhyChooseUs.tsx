@@ -1,5 +1,5 @@
 import { Home, Clock, CalendarRange, ReceiptText, ShieldCheck } from "lucide-react";
-import tpmsIconRed from "@/assets/optimized/icon-tpms-red.webp";
+import tpmsIconRedAsset from "@/assets/optimized/icon-tpms-red.webp.asset.json";
 import RevealGroup from "@/components/site/RevealGroup";
 
 type Reason = {
@@ -13,7 +13,7 @@ const reasons: Reason[] = [
   { icon: Home, title: "We come to you", desc: "Home, office, or jobsite - your driveway becomes the shop." },
   { icon: Clock, title: "No waiting rooms", desc: "Skip the lobby. Keep working, parenting, or relaxing." },
   { icon: CalendarRange, title: "Flexible scheduling", desc: "Available most days in the week, even some saturdays!" },
-  { image: tpmsIconRed, title: "TPMS expertise", desc: "Sensors replaced and programmed - no more annoying warning light." },
+  { image: tpmsIconRedAsset.url, title: "TPMS expertise", desc: "Sensors replaced and programmed - no more annoying warning light." },
   { icon: ReceiptText, title: "Transparent quotes", desc: "Clear pricing up front. All service fees, taxes, and disposal fees listed on quotes." },
   { icon: ShieldCheck, title: "Professional setup", desc: "The same professional tools and equipment you would find in a tire shop, Brought to you!" },
 ];

@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Phone, Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
-import logo from "@/assets/optimized/logo.webp";
-import wordmark from "@/assets/optimized/wordmark.webp";
+import logoAsset from "@/assets/optimized/logo.webp.asset.json";
+import wordmarkAsset from "@/assets/optimized/wordmark.webp.asset.json";
 
 const PHONE_DISPLAY = "540-45-TIRES";
 const PHONE_TEL = "5404584737"; // 540-458-4737
@@ -22,14 +22,14 @@ const Navbar = () => {
       <div className="container flex h-20 lg:h-32 items-center justify-between">
         <a href="#top" className="flex items-center gap-2 shrink-0">
           <img
-            src={logo}
+            src={logoAsset.url}
             alt="Wheels on Wheels logo"
             width={512}
             height={440}
             className="h-12 w-12 lg:h-[7.5rem] lg:w-[7.5rem] object-contain"
           />
           <img
-            src={wordmark}
+            src={wordmarkAsset.url}
             alt="Wheels on Wheels - Mobile Tire Shop"
             width={640}
             height={312}
