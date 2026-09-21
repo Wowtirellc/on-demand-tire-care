@@ -12,10 +12,10 @@ const quoteSchema = z.object({
   phone: z.string().trim().min(7, "Phone is required").max(30),
   email: z.string().trim().email("Invalid email").max(255),
   vehicle: z.string().trim().min(1, "Vehicle info is required").max(150),
-  service: z.string().trim().min(1, "Requested service is required").max(150),
-  issue: z.string().trim().min(1, "Please describe the issue").max(1000),
-  preferredTime: z.string().trim().max(150).optional().or(z.literal("")),
-  location: z.string().trim().min(1, "Service location is required").max(250),
+  service: z.string().trim().min(1, "Requested service is required").max(100),
+  issue: z.string().trim().min(1, "Please describe the issue").max(450),
+  preferredTime: z.string().trim().max(80).optional().or(z.literal("")),
+  location: z.string().trim().min(1, "Service location is required").max(200),
 });
 
 const MobileMechanicQuoteForm = () => {
