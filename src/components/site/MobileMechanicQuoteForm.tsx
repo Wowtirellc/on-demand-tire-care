@@ -53,7 +53,8 @@ const MobileMechanicQuoteForm = () => {
       `Source: Mobile Mechanic page`,
     ]
       .filter(Boolean)
-      .join("\n");
+      .join("\n")
+      .slice(0, 1000);
 
     setSubmitting(true);
     try {
