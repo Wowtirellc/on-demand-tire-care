@@ -209,14 +209,18 @@ const QuoteForm = () => {
               </div>
 
               <div className="space-y-2">
-                <Label>Photos (optional)</Label>
+                <div className="flex items-baseline justify-between">
+                  <Label>Photos (optional)</Label>
+                  <span className="text-xs text-muted-foreground">Limit {MAX_FILES} images, {MAX_SIZE_MB}MB each</span>
+                </div>
+                <p className="text-xs text-muted-foreground -mt-1">Helpful shots: your current tires, the full sidewall size, and the tire info sticker inside the driver door jamb.</p>
                 <label
                   htmlFor="photos"
                   className="flex flex-col items-center justify-center gap-2 rounded-lg border-2 border-dashed border-border bg-background/50 p-6 cursor-pointer hover:border-primary/40 hover:bg-background transition-colors"
                 >
                   <Upload className="h-6 w-6 text-muted-foreground" />
                   <span className="text-sm font-medium">Tap to add photos</span>
-                  <span className="text-xs text-muted-foreground">Tires, vehicle info, sidewall sizing - up to {MAX_FILES} images, {MAX_SIZE_MB}MB each</span>
+                  <span className="text-xs text-muted-foreground">Tires, vehicle info, sidewall sizing</span>
                   <input
                     id="photos"
                     type="file"
