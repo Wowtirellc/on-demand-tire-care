@@ -19,7 +19,7 @@ const Index = () => {
     name: "Wheels on Wheels",
     url: "https://www.wowtires.com/",
     image: "https://www.wowtires.com/og-image.jpg",
-    logo: "https://www.wowtires.com/logo.webp",
+    logo: "https://www.wowtires.com/logo.png",
     description:
       "Scheduled mobile tire replacement and TPMS sensor service. We come to your home or workplace in Augusta & Rockingham County, VA.",
     telephone: "+1-540-458-4737",
