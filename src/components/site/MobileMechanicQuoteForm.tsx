@@ -144,7 +144,7 @@ const MobileMechanicQuoteForm = () => {
 
             <div className="space-y-2">
               <Label htmlFor="service">Requested service *</Label>
-              <Input id="service" name="service" required maxLength={150} placeholder="e.g. Oil change, brake pads, check engine diagnostic" />
+              <Input id="service" name="service" required maxLength={100} placeholder="e.g. Oil change, brake pads, check engine diagnostic" />
             </div>
 
             <div className="space-y-2">
@@ -153,7 +153,7 @@ const MobileMechanicQuoteForm = () => {
                 id="issue"
                 name="issue"
                 required
-                maxLength={1000}
+                maxLength={450}
                 rows={4}
                 placeholder="Symptoms, noises, warning lights, when it started, anything we should know."
               />
@@ -164,7 +164,7 @@ const MobileMechanicQuoteForm = () => {
               <Input
                 id="preferredTime"
                 name="preferredTime"
-                maxLength={150}
+                maxLength={80}
                 placeholder="e.g. Weekday mornings, Saturday afternoon"
               />
             </div>
@@ -175,7 +175,7 @@ const MobileMechanicQuoteForm = () => {
                 id="location"
                 name="location"
                 required
-                maxLength={250}
+                maxLength={200}
                 rows={2}
                 placeholder="Street address where the vehicle will be serviced (home, office, or jobsite)."
               />
