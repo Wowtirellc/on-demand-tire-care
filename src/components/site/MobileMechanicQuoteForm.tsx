@@ -12,10 +12,10 @@ const quoteSchema = z.object({
   phone: z.string().trim().min(7, "Phone is required").max(30),
   email: z.string().trim().email("Invalid email").max(255),
   vehicle: z.string().trim().min(1, "Vehicle info is required").max(150),
-  service: z.string().trim().min(1, "Requested service is required").max(150),
-  issue: z.string().trim().min(1, "Please describe the issue").max(1000),
-  preferredTime: z.string().trim().max(150).optional().or(z.literal("")),
-  location: z.string().trim().min(1, "Service location is required").max(250),
+  service: z.string().trim().min(1, "Requested service is required").max(100),
+  issue: z.string().trim().min(1, "Please describe the issue").max(450),
+  preferredTime: z.string().trim().max(80).optional().or(z.literal("")),
+  location: z.string().trim().min(1, "Service location is required").max(200),
 });
 
 const MobileMechanicQuoteForm = () => {
@@ -53,7 +53,8 @@ const MobileMechanicQuoteForm = () => {
       `Source: Mobile Mechanic page`,
     ]
       .filter(Boolean)
-      .join("\n");
+      .join("\n")
+      .slice(0, 1000);
 
     setSubmitting(true);
     try {
@@ -143,7 +144,7 @@ const MobileMechanicQuoteForm = () => {
 
             <div className="space-y-2">
               <Label htmlFor="service">Requested service *</Label>
-              <Input id="service" name="service" required maxLength={150} placeholder="e.g. Oil change, brake pads, check engine diagnostic" />
+              <Input id="service" name="service" required maxLength={100} placeholder="e.g. Oil change, brake pads, check engine diagnostic" />
             </div>
 
             <div className="space-y-2">
@@ -152,7 +153,7 @@ const MobileMechanicQuoteForm = () => {
                 id="issue"
                 name="issue"
                 required
-                maxLength={1000}
+                maxLength={450}
                 rows={4}
                 placeholder="Symptoms, noises, warning lights, when it started, anything we should know."
               />
@@ -163,7 +164,7 @@ const MobileMechanicQuoteForm = () => {
               <Input
                 id="preferredTime"
                 name="preferredTime"
-                maxLength={150}
+                maxLength={80}
                 placeholder="e.g. Weekday mornings, Saturday afternoon"
               />
             </div>
@@ -174,7 +175,7 @@ const MobileMechanicQuoteForm = () => {
                 id="location"
                 name="location"
                 required
-                maxLength={250}
+                maxLength={200}
                 rows={2}
                 placeholder="Street address where the vehicle will be serviced (home, office, or jobsite)."
               />

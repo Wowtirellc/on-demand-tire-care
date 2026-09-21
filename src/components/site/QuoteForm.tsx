@@ -22,7 +22,18 @@ const quoteSchema = z.object({
 });
 
 const MAX_FILES = 5;
-const MAX_SIZE_MB = 10;
+const MAX_SIZE_MB = 5;
+
+const fileToBase64 = (file: File) =>
+  new Promise<string>((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => {
+      const result = String(reader.result ?? "");
+      resolve(result.slice(result.indexOf(",") + 1));
+    };
+    reader.onerror = () => reject(reader.error);
+    reader.readAsDataURL(file);
+  });
 
 const QuoteForm = () => {
   const [submitting, setSubmitting] = useState(false);
@@ -87,8 +98,15 @@ const QuoteForm = () => {
       });
       if (dbError) throw dbError;
 
+      const attachments = await Promise.all(
+        files.map(async (f) => ({
+          filename: f.name,
+          content: await fileToBase64(f),
+        }))
+      );
+
       const { error: fnError } = await supabase.functions.invoke("send-quote-email", {
-        body: data,
+        body: { ...data, attachments },
       });
       if (fnError) throw fnError;
 
