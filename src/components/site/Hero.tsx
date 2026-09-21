@@ -1,11 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import heroTrailer from "@/assets/hero-truck-trailer.jpeg";
-import heroInterior from "@/assets/hero-trailer-interior.jpeg";
-import heroLift from "@/assets/hero-suv-lift.jpg";
-import heroPorsche from "@/assets/hero-porsche-wheel.jpeg";
-const heroOriginal = "/hero-trailer-new.png";
+import heroOriginal from "@/assets/optimized/hero-trailer.webp";
+import heroTrailer from "@/assets/optimized/hero-truck-trailer.webp";
+import heroInterior from "@/assets/optimized/hero-trailer-interior.webp";
+import heroLift from "@/assets/optimized/hero-suv-lift.webp";
+import heroPorsche from "@/assets/optimized/hero-porsche-wheel.webp";
 import { PHONE_DISPLAY, PHONE_TEL } from "./Navbar";
 
 const heroImages = [
@@ -107,18 +107,17 @@ const Hero = () => {
                 role="button"
                 aria-label="Next image"
               >
-                {heroImages.map((img, i) => (
-                  <img
-                    key={img.src}
-                    src={img.src}
-                    alt={img.alt}
-                    width={1920}
-                    height={1440}
-                    loading={i === 0 ? "eager" : "lazy"}
-                    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${i === current ? "opacity-100" : "opacity-0"}`}
-                    draggable={false}
-                  />
-                ))}
+                <img
+                  key={heroImages[current].src}
+                  src={heroImages[current].src}
+                  alt={heroImages[current].alt}
+                  width={1400}
+                  height={1050}
+                  loading={current === 0 ? "eager" : "lazy"}
+                  fetchPriority={current === 0 ? "high" : "auto"}
+                  className="absolute inset-0 h-full w-full object-cover animate-fade-in"
+                  draggable={false}
+                />
 
                 <button
                   onClick={(e) => { e.stopPropagation(); prev(); }}

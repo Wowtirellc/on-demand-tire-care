@@ -1,5 +1,5 @@
 import { Home, Clock, CalendarRange, ReceiptText, ShieldCheck } from "lucide-react";
-import tpmsIconRed from "@/assets/icon-tpms-red.png";
+import tpmsIconRed from "@/assets/optimized/icon-tpms-red.webp";
 import RevealGroup from "@/components/site/RevealGroup";
 
 type Reason = {

@@ -1,9 +1,9 @@
 import RevealGroup from "@/components/site/RevealGroup";
 import { Gauge, Settings2, PackageCheck, Scale, Truck } from "lucide-react";
-import tpmsImage from "@/assets/tpms-new.jpg";
-import tireIcon from "@/assets/icon-tire.png";
-import tpmsIcon from "@/assets/icon-tpms.png";
-import tpmsIconRed from "@/assets/icon-tpms-red.png";
+import tpmsImage from "@/assets/optimized/tpms-service.webp";
+import tireIcon from "@/assets/optimized/icon-tire.webp";
+import tpmsIcon from "@/assets/optimized/icon-tpms.webp";
+import tpmsIconRed from "@/assets/optimized/icon-tpms-red.webp";
 
 import Reveal from "./Reveal";
 
@@ -74,8 +74,8 @@ const Services = () => {
                 src={tpmsImage}
                 alt="Technician programming a TPMS tire pressure sensor with a diagnostic tool"
                 loading="lazy"
-                width={1024}
-                height={1024}
+                width={1000}
+                height={500}
                 className="h-full w-full object-cover"
               />
             </div>
@@ -96,22 +96,6 @@ const Services = () => {
           </div>
         </Reveal>
 
-        {/* Limited-time TPMS sale banner */}
-        <Reveal direction="up" delay={200}>
-          <div className="mt-6 rounded-2xl border border-primary/40 bg-primary/10 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-            <span className="inline-flex shrink-0 items-center rounded-full bg-primary text-primary-foreground px-3 py-1 text-xs font-bold uppercase tracking-wider">
-              Limited time
-            </span>
-            <div className="flex-1">
-              <h4 className="text-lg sm:text-xl font-semibold">
-                TPMS sensors replaced for just <span className="text-primary">$45</span> each
-              </h4>
-              <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
-                Tax, at home installation, and programming included. Offer valid through the end of June.
-              </p>
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   );
