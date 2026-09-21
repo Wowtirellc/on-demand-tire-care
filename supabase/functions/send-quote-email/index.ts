@@ -72,6 +72,14 @@ Deno.serve(async (req) => {
         reply_to: data.email,
         subject: `New quote request from ${data.name}`,
         html,
+        ...(Array.isArray(data.attachments) && data.attachments.length > 0
+          ? {
+              attachments: data.attachments
+                .filter((a) => a?.filename && a?.content)
+                .slice(0, 5)
+                .map((a) => ({ filename: a.filename, content: a.content })),
+            }
+          : {}),
       }),
     });
 
