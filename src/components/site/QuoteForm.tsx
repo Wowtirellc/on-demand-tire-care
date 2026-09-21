@@ -98,8 +98,15 @@ const QuoteForm = () => {
       });
       if (dbError) throw dbError;
 
+      const attachments = await Promise.all(
+        files.map(async (f) => ({
+          filename: f.name,
+          content: await fileToBase64(f),
+        }))
+      );
+
       const { error: fnError } = await supabase.functions.invoke("send-quote-email", {
-        body: data,
+        body: { ...data, attachments },
       });
       if (fnError) throw fnError;
 
