@@ -1,19 +1,19 @@
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
-import heroTrailer from "@/assets/hero-truck-trailer.jpeg";
-import heroInterior from "@/assets/hero-trailer-interior.jpeg";
-import heroLift from "@/assets/hero-suv-lift.jpg";
-import heroPorsche from "@/assets/hero-porsche-wheel.jpeg";
-const heroOriginal = "/hero-trailer-new.png";
+import heroOriginalAsset from "@/assets/optimized/hero-trailer.webp.asset.json";
+import heroTrailerAsset from "@/assets/optimized/hero-truck-trailer.webp.asset.json";
+import heroInteriorAsset from "@/assets/optimized/hero-trailer-interior.webp.asset.json";
+import heroLiftAsset from "@/assets/optimized/hero-suv-lift.webp.asset.json";
+import heroPorscheAsset from "@/assets/optimized/hero-porsche-wheel.webp.asset.json";
 import { PHONE_DISPLAY, PHONE_TEL } from "./Navbar";
 
 const heroImages = [
-  { src: heroOriginal, alt: "Wheels on Wheels technician replacing a tire from a service trailer in a customer's driveway" },
-  { src: heroTrailer, alt: "Wheels on Wheels branded truck and mobile tire service trailer" },
-  { src: heroInterior, alt: "Inside the mobile tire service trailer with professional tire changer and balancer" },
-  { src: heroLift, alt: "SUV raised on a mobile lift for tire service" },
-  { src: heroPorsche, alt: "Freshly mounted Yokohama Geolandar tire on a Porsche alloy wheel during mobile service" },
+  { src: heroOriginalAsset.url, alt: "Wheels on Wheels technician replacing a tire from a service trailer in a customer's driveway" },
+  { src: heroTrailerAsset.url, alt: "Wheels on Wheels branded truck and mobile tire service trailer" },
+  { src: heroInteriorAsset.url, alt: "Inside the mobile tire service trailer with professional tire changer and balancer" },
+  { src: heroLiftAsset.url, alt: "SUV raised on a mobile lift for tire service" },
+  { src: heroPorscheAsset.url, alt: "Freshly mounted Yokohama Geolandar tire on a Porsche alloy wheel during mobile service" },
 ];
 
 const Hero = () => {
@@ -107,18 +107,17 @@ const Hero = () => {
                 role="button"
                 aria-label="Next image"
               >
-                {heroImages.map((img, i) => (
-                  <img
-                    key={img.src}
-                    src={img.src}
-                    alt={img.alt}
-                    width={1920}
-                    height={1440}
-                    loading={i === 0 ? "eager" : "lazy"}
-                    className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-1000 ${i === current ? "opacity-100" : "opacity-0"}`}
-                    draggable={false}
-                  />
-                ))}
+                <img
+                  key={heroImages[current].src}
+                  src={heroImages[current].src}
+                  alt={heroImages[current].alt}
+                  width={1400}
+                  height={1050}
+                  loading={current === 0 ? "eager" : "lazy"}
+                  fetchPriority={current === 0 ? "high" : "auto"}
+                  className="absolute inset-0 h-full w-full object-cover animate-fade-in"
+                  draggable={false}
+                />
 
                 <button
                   onClick={(e) => { e.stopPropagation(); prev(); }}

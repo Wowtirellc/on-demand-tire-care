@@ -15,13 +15,40 @@ const Index = () => {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "AutoRepair",
+    "@id": "https://www.wowtires.com/#business",
     name: "Wheels on Wheels",
+    url: "https://www.wowtires.com/",
+    image: "https://www.wowtires.com/og-image.jpg",
+    logo: "https://www.wowtires.com/logo.png",
     description:
       "Scheduled mobile tire replacement and TPMS sensor service. We come to your home or workplace in Augusta & Rockingham County, VA.",
     telephone: "+1-540-458-4737",
-    areaServed: ["Augusta County, VA", "Rockingham County, VA"],
-    openingHours: "Mo-Sa 08:00-18:00",
-    serviceType: ["Mobile tire replacement", "Tire mounting and balancing", "TPMS sensor replacement", "TPMS programming"],
+    areaServed: [
+      { "@type": "AdministrativeArea", name: "Augusta County, Virginia" },
+      { "@type": "AdministrativeArea", name: "Rockingham County, Virginia" },
+    ],
+    openingHoursSpecification: [{
+      "@type": "OpeningHoursSpecification",
+      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      opens: "09:00",
+      closes: "17:00",
+    }],
+    contactPoint: {
+      "@type": "ContactPoint",
+      telephone: "+1-540-458-4737",
+      contactType: "customer service",
+      availableLanguage: "English",
+    },
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Mobile tire services",
+      itemListElement: [
+        "Mobile tire replacement",
+        "Tire mounting and balancing",
+        "TPMS sensor replacement and programming",
+        "Minor tire repairs",
+      ].map((name) => ({ "@type": "Offer", itemOffered: { "@type": "Service", name } })),
+    },
   };
 
   return (

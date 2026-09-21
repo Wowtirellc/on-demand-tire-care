@@ -1,9 +1,9 @@
 import RevealGroup from "@/components/site/RevealGroup";
 import { Gauge, Settings2, PackageCheck, Scale, Truck } from "lucide-react";
-import tpmsImage from "@/assets/tpms-new.jpg";
-import tireIcon from "@/assets/icon-tire.png";
-import tpmsIcon from "@/assets/icon-tpms.png";
-import tpmsIconRed from "@/assets/icon-tpms-red.png";
+import tpmsImageAsset from "@/assets/optimized/tpms-service.webp.asset.json";
+import tireIconAsset from "@/assets/optimized/icon-tire.webp.asset.json";
+import tpmsIconAsset from "@/assets/optimized/icon-tpms.webp.asset.json";
+import tpmsIconRedAsset from "@/assets/optimized/icon-tpms-red.webp.asset.json";
 
 import Reveal from "./Reveal";
 
@@ -18,10 +18,10 @@ const services: Service[] = [
   { icon: Truck, title: "Mobile tire replacement", desc: "Full tire swap-outs at your driveway, parking lot, or jobsite." },
   { icon: Scale, title: "Mounting & balancing", desc: "Computer balancing on professional shop-grade equipment." },
 
-  { image: tpmsIcon, title: "TPMS sensor replacement", desc: "Replace failed/dying TPMS sensors with AUTEL genuine tire pressure sensors with warranty." },
+  { image: tpmsIconAsset.url, title: "TPMS sensor replacement", desc: "Replace failed/dying TPMS sensors with AUTEL genuine tire pressure sensors with warranty." },
   { icon: Settings2, title: "TPMS programming & relearn", desc: "Sensor programming and vehicle relearn so warning lights stay off." },
   { icon: PackageCheck, title: "Customer-supplied tires", desc: "We sell most major and minor tire brands. Found a better price or a tire we cant source? We will gladly install them!" },
-  { image: tireIcon, title: "Minor tire repairs", desc: "We perform flat repairs on tires from road debris like screws or nails, just send a picture of the nail's location" },
+  { image: tireIconAsset.url, title: "Minor tire repairs", desc: "We perform flat repairs on tires from road debris like screws or nails, just send a picture of the nail's location" },
 ];
 
 const Services = () => {
@@ -71,17 +71,17 @@ const Services = () => {
           <div className="mt-16 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center rounded-3xl border border-border bg-card overflow-hidden">
             <div className="aspect-[4/3] lg:aspect-auto lg:h-full">
               <img
-                src={tpmsImage}
+                src={tpmsImageAsset.url}
                 alt="Technician programming a TPMS tire pressure sensor with a diagnostic tool"
                 loading="lazy"
-                width={1024}
-                height={1024}
+                width={1000}
+                height={500}
                 className="h-full w-full object-cover"
               />
             </div>
             <div className="p-8 lg:p-12">
               <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-3 py-1 text-xs font-medium uppercase tracking-wider">
-                <img src={tpmsIconRed} alt="" className="h-4 w-4 object-contain" />
+                <img src={tpmsIconRedAsset.url} alt="" className="h-4 w-4 object-contain" />
                 TPMS expertise
               </span>
               <h3 className="mt-4 text-2xl sm:text-3xl font-semibold">
@@ -96,22 +96,6 @@ const Services = () => {
           </div>
         </Reveal>
 
-        {/* Limited-time TPMS sale banner */}
-        <Reveal direction="up" delay={200}>
-          <div className="mt-6 rounded-2xl border border-primary/40 bg-primary/10 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6">
-            <span className="inline-flex shrink-0 items-center rounded-full bg-primary text-primary-foreground px-3 py-1 text-xs font-bold uppercase tracking-wider">
-              Limited time
-            </span>
-            <div className="flex-1">
-              <h4 className="text-lg sm:text-xl font-semibold">
-                TPMS sensors replaced for just <span className="text-primary">$45</span> each
-              </h4>
-              <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
-                Tax, at home installation, and programming included. Offer valid through the end of June.
-              </p>
-            </div>
-          </div>
-        </Reveal>
       </div>
     </section>
   );
